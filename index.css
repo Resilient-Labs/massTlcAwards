@@ -9,6 +9,8 @@ body {
 }
 
 p {
+	
+	text-align: center;
 	font-size: 12pt;
 }
 
@@ -18,7 +20,10 @@ h1 {
 }
 
 h2 {
-	margin: 20px 10px 20px 70px;
+	width: 100%;	
+	display: inline-block;
+	text-align: center;
+	margin: 20px auto;
 }
 
 li {
@@ -26,12 +31,10 @@ li {
 	margin: 20px;
 }
 
-span {
-}
 
-.container-1 {
+#container-1 {
 	background-color: #6696CC;
-	float: left;
+	float: left;	
 	width: 100%;
 	height: 100vh;
 }
@@ -46,7 +49,6 @@ span {
 .register-here {
 	background-color: white;
 	width: 15%;
-	height: 50px;
 	margin: 30px auto;
 	border: 2px;
 	border-color: black;
@@ -68,25 +70,22 @@ span {
 
 
 
-.container-2 {
+#container-2 {
 	background-color: white;
 	float: left;
-	width: 100%;
-	height: 150vh;
+	width: 100%;		
 }
 
 .column-1 {
 	background-color: white;
 	float: left;
 	width: 50%;
-	height: 324px;
 }
 
 .column-2 {
 	background-color: white;
 	float: left;
 	width: 50%;
-	height: 324px;
 }
 
 #column_1_p {
@@ -112,14 +111,12 @@ span {
 .column-3 {
 	background-color: white;
 	width: 50%;
-	height: 600px;
 	float: left;
 }
 
 .column-4 {
 	background-color: white;
 	width: 50%;
-	height: 640px;
 	float: left;
 }
 
@@ -164,28 +161,24 @@ span {
 	background-color: white;
 	float: left;
 	width: 50%;
-	height: 270px;
 }
 
 .sm-column-2 {
 	background-color: white;
 	float: left;
 	width: 50%;
-	height: 270px;
 }
 
 .sm-column-3 {
 	background-color: white;
 	float: left;
 	width: 50%;
-	height: 270px;
 }
 
 .sm-column-4 {
 	background-color: white;
 	float: left;
 	width: 50%;
-	height: 270px;
 }
 
 .sm-circle-1 {
@@ -240,11 +233,95 @@ span {
 	border-radius: 70px;
 }
 
-.container-3 {
-	background-color: white;
+
+#sponsors {
+	background-color: #f0f0f5;
+	width: 100%;
+	float: left;
+}
+
+#platinum-container {
+	width: 84%;
+	margin: 0 auto;
+	height: 140px;
+}
+
+#platinum-container-2 {
+	width: 52.5%;
+	margin: 0 auto;
+	height: 140px;
+}
+
+.platinum-sponsors {
+	background-color: gray;
+    margin: 5px;
+    width: 141px;
+    height: 100px;
+    float: left;
+}
+
+.gold-sponsors {
+	background-color: gray;
+    margin: 5px;
+    width: 141px;
+    height: 100px;
+    float: left;
+}
+
+
+
+
+
+#become-sponsor {
 	float: left;
 	width: 100%;
-	height: 60vh;
+	background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2014/07/background-wallpapers-26.jpg");
+	background-size: cover;
+	
+}
+
+#become-sponsor-insideContainer {
+	margin: 0 auto;
+	background-color: green;
+	width: 80%;
+}
+
+.become-sponsor-insideColumns {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: white;
+	background:rgba(255,255,255, 0.3);
+	float: left;
+	width: 50%;
+}
+
+.insideColumns-p {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.button-insideColumn {
+	margin: 30px auto;
+	width: 70%;
+	background-color: green;
+	border: 1px solid black;
+}
+
+.button-insideColumn-2 {
+	margin: 30px auto;
+	width: 70%;
+	border: 1px solid black;
+
+}
+
+
+
+
+
+#container-3 {
+	background-color: gray;
+	float: left;
+	width: 100%;
 }
 
 
@@ -252,7 +329,6 @@ span {
 	background-color: gray;
 	float: left;
 	width: 50%;
-	height: 50vh;
 }
 
 
@@ -260,14 +336,18 @@ span {
 	background-color: gray;
 	float: left;
 	width: 50%;
-	height: 50vh;
+}
+
+.column-5-h2 {
+	text-align: left;
+	margin-left: 70px;
+	width: 90%;
 }
 
 .column-7 {
 	background-color: gray;
 	float: left;
 	width: 100%;
-	height: 5vh;
 }
 
 #column-5_p {
@@ -281,7 +361,7 @@ span {
 #column-7_p {
 	width: 80%;
 	text-align: center;
-	margin: 0 auto;
+	margin: 30px auto;
 }
 
 .list-container {
@@ -298,7 +378,7 @@ span {
 
 
 
-.container-4 {
+#container-4 {
 	margin-top: 10px;
 	float: left;
 	width: 100%;
@@ -306,23 +386,24 @@ span {
 }
 
 #categories {
+	font-size: 20pt;
 	text-align: center;
-	margin: 30px auto;
+	margin: 20px auto;
 }
 .individual-c {
-	height: 250px;
+	
 }
 
 .organization-c {
-	height: 250px;
+	
 }
 
 .innovation-c {
-	height: 250px;
+	
 }
 
 #cut-c {
-	width: 30%;
+	width: 60%;
 }
 
 
@@ -378,14 +459,16 @@ span {
 }
 
 #award-paragraph {
-
+	text-align: center;
+    font-size: 11pt;
 }
 
 
 .sm-column-8 {
-	float: left;
-	width: 33.333%;
-	height: 200px;
+	display: inline-block;
+	width: 25%;
+	margin-bottom: 40px;
+	margin-left: 85px;
 }
 
 
