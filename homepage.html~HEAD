@@ -4,17 +4,17 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<link rel="stylesheet" href="font-awesome.css">
-	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 </head>
 <body>
-	<div class="fixed-header">
+	<nav id="nav-bar">
 		<img id="massTLC_logo" src="imgs/MassTLC_logo.png">
-		
-			<a href="#sponsors"><p class="nav-items">Sponsors<span class="register">Register</span></p></a>
-			<a href="#container-3"><p class="nav-items">About</p></a>
-			<a href="#dates"><p class="nav-items">Dates</p></a>
-			<a href="#social-media"><p class="nav-items">Contact</p></a>
-	</div>
+		<ul id="nav-ul">
+			<a href="#sponsors"><li class="nav-items">Sponsors<span class="register">Register</span></li></a>
+			<a href="#container-3"><li class="nav-items">About</li></a>
+			<a href="#dates"><li class="nav-items">Dates</li></a>
+			<a href="#social-media"><li class="nav-items">Contact</li></a>
+		</ul>
+	</nav>
 
 
 
@@ -38,7 +38,7 @@
 		</div>
 	</div>
 
-	<div id="sponsors">
+	<div id="travel" id="sponsors">
 		<h2>Platinum Sponsors</h2>
 
 		<div id="platinum-container">
@@ -414,16 +414,7 @@
     }
   });
 });
-
 </script>
-
-<script>
-	$(document).ready(function() {
-    var contentPlacement = $('#header').position().top + $('#header').height();
-    $('#content').css('margin-top',contentPlacement);
-});
-</script>
-
 
 
 
