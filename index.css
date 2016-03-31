@@ -6,7 +6,6 @@ html {
 body {
 	font-family: helvetica;
 	margin: 0;
-	padding: 0;
 }
 
 p {
@@ -35,22 +34,26 @@ hr {
 
 }
 
-#nav-bar {
-	float: left;
+.fixed-header {
+	background-color: white;
 	width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 999;
 }
 
-#nav-ul {
-	margin: 21px auto;
+
+.nav-items {
+	margin: 41px 20px;
+	color: rgb(195,195,195);
 	float: right;
 	text-decoration: none;
 	list-style: none;
 	display: inline-block;
-}
-
-.nav-items {
-	color: rgb(195,195,195);
-	float: right;
 }
 
 .register {
@@ -632,13 +635,13 @@ i.fa.fa-twitter {
 
 
 	#platinum-container {
-	width: 60%;
+	width: 100%;
 	margin: 0 auto;
 	height: 220px;
 }
 
 	#platinum-container-2 {
-		width: 60%;
+		width: 100%;
 		margin: 0 auto;
 		height: 220px;
 	}
@@ -646,7 +649,7 @@ i.fa.fa-twitter {
 	.platinum-sponsors {
 		background-color: white;
 	    margin: .5%;
-	    width: 23.5%;
+	    width: 24%;
 	    height: 100px;
 	    float: left;
 	}
@@ -654,7 +657,7 @@ i.fa.fa-twitter {
 	.gold-sponsors {
 		background-color: white;
 	    margin: .5%;
-	    width: 23.5%;
+	    width: 24%;
 	    height: 100px;
 	    float: left;
 	}
@@ -728,11 +731,6 @@ i.fa.fa-twitter {
 		width: 100%;
 	}
 
-	#nav-ul {
-		width: 100%;
-		float: left;
-	}
-
 	.nav-items {
 		float: none;
 	}
@@ -761,7 +759,7 @@ i.fa.fa-twitter {
 	}
 
 	.gold-sponsors {
-		width: 49	%;
+		width: 49%;
 	}
 
 	#platinum-container {
