@@ -18,7 +18,7 @@ body {
 
 p {
 	
-	text-align: center;
+	/*text-align: center;*/
 	font-size: 12pt;
 }
 
@@ -42,13 +42,13 @@ li {
 	margin: 20px;
 }
 hr {
-
+	width: 80%;
+	max-width: 640px;
 }
 iframe{
     width: 100%;
     height: 80vh;
     margin-bottom: 40px;
-
 }
 
 .fixed-header {
@@ -94,8 +94,8 @@ iframe{
 }
 
 .inner-content p{
-	width:100%;
-	max-width: 780px;
+	width:80%;
+	max-width: 640px;
 	margin:0 auto;
 	text-align:left;
 }
@@ -130,9 +130,16 @@ iframe{
 	background-color: gray;
 	float: left;	
 	width: 100%;
-}
-#container-1 .inner-content p{
+	display:block;
 	text-align:center;
+}
+#container-1 .inner-content p, #sponsors .inner-content p{
+	text-align:center;
+}
+#container-1 a{
+	width:150px;
+	margin:0 auto;
+	display:block;
 }
 
 .content-player {
@@ -283,11 +290,13 @@ iframe{
 	text-align: center;
     position: relative;
     left: 50%;
+    width: 120px;
+    height: 120px;
     transform: translate(-50%,0);
     display: block;
     float: left;
     margin: 20px auto;
-    font-size: 110px;
+    font-size: 60px;
     padding: 30px;
     color: #44687d;
     background: white;
@@ -306,17 +315,13 @@ iframe{
 	float: left;
 }
 
-#platinum-container {
+#platinum-container, #platinum-container2 {
 	width: 50%;
 	margin: 0 auto;
-	height: 220px;
+    margin-bottom: 40px;
+	text-align:center;
 }
 
-#platinum-container-2 {
-	width: 50%;
-	margin: 0 auto;
-	height: 220px;
-}
 
 .platinum-sponsors, 
 #platinum-container img, 
@@ -326,14 +331,10 @@ iframe{
 #platinum-container2 p img{
 	background-color: white;
     margin: .5%;
-    width: 23.5%;
+    width: 150px;
     height: auto;
-    float: left;
-}
-
-
-
-
+    /*float: left;
+*/}
 
 
 #become-sponsor {
@@ -359,13 +360,12 @@ iframe{
 .become-sponsor-insideColumns h2{
 	padding:20px 0;
 }
+.become-sponsor-insideColumns p{
+	width: 80%;
+    margin: 0 auto;
+}
 .become-sponsor-insideColumns.right{
 	float:right;
-}
-
-.insideColumns-p {
-	width: 80%;
-	margin: 0 auto;
 }
 
 .button:hover, .become-sponsor-insideColumns a:hover{
@@ -375,7 +375,7 @@ iframe{
 	color:#FFF;
 }
 .become-sponsor-insideColumns a {
-	/*margin: 30px auto;*/
+	left:50%;
 	width: 70%;
 	transform: translate(-50%,0);
 	position:absolute;
@@ -401,12 +401,17 @@ iframe{
 }
 
 
-.column-5, .column-6 {
+.column-5, .column-6{
 	/*background-color: #44687d;*/
 	color:#FFF;
-	float: left;
-	width: 50%;
+	width: 45%;
 	text-align:left;
+}
+.column-5{
+	float:left;
+}
+.column-6{
+	float:right;
 }
 
 
@@ -547,7 +552,6 @@ iframe{
 }
 
 .inner-content .dates-p-style {
-	text-align: center;
 	text-align: center;
 }
 

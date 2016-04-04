@@ -385,6 +385,7 @@ ul {
 
 ol {
 	list-style: decimal;
+	padding:0;
 }
 
 li > ul,
@@ -555,6 +556,9 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
+    position: fixed;
+    z-index: 69;
+    background-color: #FFF;
 }
 .main-navigation img{
 	float: left;

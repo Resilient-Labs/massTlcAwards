@@ -41,7 +41,8 @@
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php
 			endif; ?>
-		</div><!-- .site-branding -->
+		</div>-->
+		<!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 				<img src="http://www.masstlcawards.com/wp-content/uploads/2016/04/MassTLC_logo.png">

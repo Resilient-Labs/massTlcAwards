@@ -6,27 +6,14 @@
  */
 
 get_header(); ?>
+<!-- CODE FROM https://wordpress.org/support/topic/remove-p-tags-when-outputting-content -->
+<?php remove_filter ('the_content',  'wpautop'); ?>
+<?php the_content(__('Read more'));?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<!-- <div class="fixed-header">
-			<img id="massTLC_logo" src="imgs/MassTLC_logo.png">
-			
-				<a href="#sponsors"><p class="nav-items">Sponsors<span class="register">Register</span></p></a>
-				<a href="#container-3"><p class="nav-items">About</p></a>
-				<a href="#dates"><p class="nav-items">Dates</p></a>
-				<a href="#social-media"><p class="nav-items">Contact</p></a>
-			</div> -->
 
-
-
-	
-			<!-- h1>Winners announced at the Leadership Awards Gala on September 16</h1>
-			<div class="content-player"></div>
-			<div class="register-here">
-				<p id="rh-styles">Register Here</p>
-			</div>
-			<h2 id="t-i-o">TWEET IT OUT! #MASSTLCAWARDS</h2> -->
+			<!--<h2 id="t-i-o">TWEET IT OUT! #MASSTLCAWARDS</h2> -->
 			<?php
 			$query = new WP_query('pagename=intro-video');
 			//THE LOOP
@@ -42,7 +29,6 @@ get_header(); ?>
 			}
 			wp_reset_postdata();
 
-
 			?>
 	<div id="sponsors" class="main-container">
 		<?php
@@ -52,7 +38,9 @@ get_header(); ?>
 			while ($query->have_posts()){
 				$query->the_post();
 				echo "<h2>" . get_the_title() . "</h2>";
+				
 				echo "<div id='platinum-container' class='inner-content'>";
+				echo "<hr />";	
 				the_content();
 				echo "</div>";
 			}
@@ -79,6 +67,7 @@ get_header(); ?>
 				$query->the_post();
 				echo "<h2>" . get_the_title() . "</h2>";
 				echo "<div id='platinum-container2' class='inner-content'>";
+				echo "<hr />";
 				the_content();
 				echo "</div>";
 			}
@@ -106,8 +95,12 @@ get_header(); ?>
 				while ($query->have_posts()){
 					$query->the_post();
 					echo "<h2>" . get_the_title() . "</h2>";
-					echo "<div class='column-1 main-container'><div class='inner-content'>";
+	
+					echo "<div class='column-1'><div class='inner-content'>";
+					echo "<hr />";
+					echo "<p>";
 					the_content();
+					echo "</p>";
 					echo "</div></div>";
 				}
 			}
@@ -128,9 +121,9 @@ get_header(); ?>
 					$query->the_post();
 
 					echo "<h2>" . get_the_title() . "</h2>";
-					echo "<span class='insideColumns-p'>";
+					echo "<p>";
 					the_content();
-					echo "</span>";
+					echo "</p>";
 					
 				}
 			}
@@ -147,9 +140,10 @@ get_header(); ?>
 					$query->the_post();
 
 					echo "<h2>" . get_the_title() . "</h2>";
-					echo "<span class='insideColumns-p'>";
+					
+					echo "<p>";
 					the_content();
-					echo "</span>";
+					echo "</p>";
 					
 				}
 			}
@@ -177,8 +171,10 @@ get_header(); ?>
 					$query->the_post();
 
 					echo "<h2>" . get_the_title() . "</h2>";
-					echo "<hr class='white' />"
+					echo "<p>";
+					
 					the_content();
+					echo "</p>";
 				}
 			}
 			wp_reset_postdata();
@@ -197,7 +193,7 @@ get_header(); ?>
 					$query->the_post();
 
 					echo "<h2>" . get_the_title() . "</h2>";
-					echo "<hr class='white' />"
+					
 					echo "<div class='list-container'>";
 					the_content();
 					echo "</div>";
