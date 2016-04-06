@@ -48,16 +48,6 @@ get_header(); ?>
 		wp_reset_postdata();
 		?>
 
-		<!-- <div id="platinum-container"> -->
-			<!-- <div class="platinum-sponsors"></div>
-			<div class="platinum-sponsors"></div>
-			<div class="platinum-sponsors"></div>
-			<div class="platinum-sponsors"></div>
-			<div class="platinum-sponsors"></div>
-			<div class="platinum-sponsors"></div>
-			<div class="platinum-sponsors"></div>
-			<div class="platinum-sponsors"></div> -->
-		<!-- </div> -->
 		
 		<?php
 		$query = new WP_query('pagename=gold-sponsors');
@@ -203,160 +193,71 @@ get_header(); ?>
 			?>
 			
 			
-				<!-- <ol class="list-1">
-					<li>Check out the past couple of years </li>
-					<li>Check out the past couple of years </li>
-					<li>Check out the past couple of years </li>
-					<li>Check out the past couple of years </li>
-			
-					<li>Check out the past couple of years </li>
-					<li>Check out the past couple of years </li>
-					<li>Check out the past couple of years </li>
-					<li>Check out the past couple of years </li>
-				</ol> -->
-			
 		</div>
-		<!-- <div class="column-7">
-			<p id="column-7_p">Check out the past couple of years 2012, 2013, 2014</p>
-		</div> -->
 		</div>
 	</div>
 
 
 	<!-- INDIVIDUAL AWARDS -->
-	<!-- <div id="container-4">
-		
-		<div class="individual-c">
-			<h3 id="categories">Individual Categories</h3>
-			<hr id="cut-c">
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-			</div>
-			
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-			</div>
-			
+	<div id="awards" class="main-container">
+		<div class="inner-content">
+			<h2>Individual Awards</h2>
+			<hr>
+			<?php
+			$query = new WP_query('category_name=individual-categories');
+			//THE LOOP
+			if($query->have_posts()){
+				while ($query->have_posts()){
+					$query->the_post();
+					echo "<div class='category'>";
+					the_post_thumbnail();
+					echo "<div><h3>" . get_the_title() . "</h3><p>";
+					the_content();
+					echo "</p></div></div>";
+				}
+			}
+			wp_reset_postdata();
+			?>
+			<h2>Organizational Categories</h2>
+			<hr>
+			<?php
+			$query = new WP_query('category_name=organizational-categories');
+			//THE LOOP
+			if($query->have_posts()){
+				while ($query->have_posts()){
+					$query->the_post();
+					echo "<div class='category'>";
+					the_post_thumbnail();
+					echo "<div><h3>" . get_the_title() . "</h3><p>";
+					the_content();
+					echo "</p></div></div>";
+				}
+			}
+			wp_reset_postdata();
+			?>
+			<h2>Innovation Categories</h2>
+			<hr>
+			<?php
+			$query = new WP_query('category_name=innovation-categories');
+			//THE LOOP
+			if($query->have_posts()){
+				while ($query->have_posts()){
+					$query->the_post();
+					echo "<div class='category'>";
+					the_post_thumbnail();
+					echo "<div><h3>" . get_the_title() . "</h3><p>";
+					the_content();
+					echo "</p></div></div>";
+				}
+			}
+			wp_reset_postdata();
+			?>
 
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-			</div>
+
 		</div>
 
-		<div class="individual-c">
-			<h3 id="categories">Organization Categories</h3>
-			<hr id="cut-c">
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-			</div>
-		
-			
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-			</div>
-			
 
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-			</div>
-		</div>
-			
-		
-
-		<div class="individual-c">
-			<h3 id="categories">Innovation Categories</h3>
-			<hr id="cut-c">
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-
-			</div>
-		
-			
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-			</div>
-			
-
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-			</div>
-
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-
-			</div>
-		
-			
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-			</div>
-			
-
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-			</div>
-			
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-
-			</div>
-		
-			
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-			</div>
-			
-
-			<div class="container_3perLine">
-				<div class="circles"></div>
-				<h5 class="awards-title">CEO OF THE YEAR</h5>
-				<p class="awards-paragraphs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-					
-			</div>
-		</div>
-	</div> -->
+	</div>
 
 		<!-- SAVE THE DATES -->
 		<div id="dates" class="main-container">
@@ -374,7 +275,7 @@ get_header(); ?>
 				</div>
 				<div class="dates-containers">
 					<h5 class="dates-h5-style"><span><i class="fa fa-calendar-o"></i></span> July 31st</h5>
-					<p class="dates-p-style"><span><i class="fa fa-trophy"></i></span> Summer reception</p>
+					<p class="dates-p-style"><span><i class="fa fa-trophy"></i></span>Summer Reception</p>
 					<p class="dates-p-style"><span><i class="fa fa-map-marker"></i></span> Microsoft NERD, Cambridge</p>
 				</div>
 				<div class="dates-containers">
@@ -390,14 +291,14 @@ get_header(); ?>
 					<!-- <h6 class="fill-info">First Name*</h6> -->
 					<textarea class="fill-textarea" placeholder="Name"></textarea>
 					<!-- <h6 class="fill-info">Email*</h6> -->
-					<textarea class="fill-textarea" placeholder="email"></textarea>
+					<textarea class="fill-textarea" placeholder="Email"></textarea>
 					<textarea id="message" placeholder="How can we help you?"></textarea>
 					<a class="button" id="send-msg">Send Message</a>
 				</div>
 		</div>
 		
 
-		<div id="social-media">
+		<!-- <div id="social-media">
 			<div class="socialMedia-containers">
 				<div id="massTLC"></div>
 				<div class="circles-2"><i class="fa fa-facebook"></i></div>
@@ -423,15 +324,16 @@ get_header(); ?>
 					<div class="flickr-imgs"></div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		
-		<div id="bottom-footer">
-			<p id="bottom-footer-p">Copyright 
-			<script type="text/javascript">
+		<div class="bottom-footer">
+			
+			<p>Follow Us on social media: <a href="https://www.facebook.com/masstlc" target="_blank">Facebook</a> | <a href="https://twitter.com/MassTLC" target="_blank">Twitter</a> | <a href="https://www.linkedin.com/company/mass-technology-leadership-council" target="_blank">LinkedIn</a><br/>
+			Copyright <script type="text/javascript">
   			document.write(new Date().getFullYear());
 			</script> 
-			MassLTC. All Rights Reserved. Website by Resilient Coders</p>
+			MassLTC. All Rights Reserved. Built by a <a href="http://resilientcoders.org" target="_blank">Resilient Coder</p>
 		</div>
 
 

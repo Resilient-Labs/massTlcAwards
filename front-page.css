@@ -19,7 +19,7 @@ body {
 p {
 	
 	/*text-align: center;*/
-	font-size: 12pt;
+	font-size: 11pt;
 }
 
 h1 {
@@ -87,14 +87,14 @@ iframe{
 	margin: 15px 0 15px 80px;
 }
 .inner-content{
-	width:100%;
+	width:80%;
 	max-width: 1000px;
 	margin:0 auto;
 	text-align:left;
 }
 
 .inner-content p{
-	width:80%;
+	width:100%;
 	max-width: 640px;
 	margin:0 auto;
 	text-align:left;
@@ -121,6 +121,8 @@ iframe{
 }
 .main-container{
 	padding:40px 0;
+	float:left;
+	width: 100%;
 }
 #container-1, #msg, #become-sponsor{
 	background-image:url('http://www.masstlcawards.com/wp-content/uploads/2016/04/rma_gala15_med_0126__large.jpg');
@@ -132,6 +134,7 @@ iframe{
 	width: 100%;
 	display:block;
 	text-align:center;
+	padding-top:80px;
 }
 #container-1 .inner-content p, #sponsors .inner-content p{
 	text-align:center;
@@ -434,6 +437,7 @@ iframe{
 .column-5 p {
 	text-align: left;
 	margin: 0 auto;
+/*	width:100%;*/
 }
 
 
@@ -461,27 +465,27 @@ iframe{
 	width: 100%;
 }
 
-#categories {
-	font-size: 20pt;
-	text-align: center;
-	margin: 20px auto;
+.category{
+	width:33%;
+	float: left;
+	margin: 20px 0;
+}
+.category h3{
+	margin-top: 0;
+}
+.category img{
+	width:100px;
+	height: auto;
+	float: left;
+}
+.category div {
+    float: right;
+    width: calc(100% - 120px);
+    padding-right:20px;
 }
 
-.individual-c {
-	width: 100%;
-}
 
-.organization-c {
-	width: 100%;
-}
 
-.innovation-c {
-	width: 100%;
-}
-
-#cut-c {
-	width: 70%;
-}
 
 
 
@@ -634,16 +638,19 @@ i.fa.fa-twitter {
 	margin-top: 20px;
 }
 
-#bottom-footer {
-	background-color: black;
+.bottom-footer {
+	background-color: #000;
 	float: left;
-	height: 100px;
 	width: 100%;
+	text-align: center;
 }
 
-#bottom-footer-p {
-	color: white;
+.bottom-footer p {
+	color: #FFF;
 	margin: 41px auto;
+}
+.bottom-footer a, .bottom-footer a:visited{
+	color:#58A618;
 }
 
 
@@ -716,13 +723,13 @@ i.fa.fa-twitter {
 	#platinum-container {
 	width: 100%;
 	margin: 0 auto;
-	height: 220px;
+/*	height: 220px;*/
 }
 
 	#platinum-container-2 {
 		width: 100%;
 		margin: 0 auto;
-		height: 220px;
+		/*height: 220px;*/
 	}
 
 	.platinum-sponsors {

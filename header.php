@@ -46,7 +46,7 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 				<img src="http://www.masstlcawards.com/wp-content/uploads/2016/04/MassTLC_logo.png">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'masstlcawards' ); ?></button>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'masstlcawards' ); ?></button>
 				<?php 
 				if (is_front_page()){
 					wp_nav_menu ( array( 'menu' => 'Front Page Menu'));

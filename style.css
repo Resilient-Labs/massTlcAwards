@@ -656,6 +656,17 @@ a:active {
 .main-navigation.toggled ul {
 	display: block;
 }
+.menu-toggle{
+	float:right;
+	margin-top:20px;
+	margin-right: 20px;
+}
+@media screen and (min-width: 645px) {
+	.main-navigation li {
+	    margin-left: 5px;
+	}
+
+}
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
