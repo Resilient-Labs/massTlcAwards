@@ -298,33 +298,7 @@ get_header(); ?>
 		</div>
 		
 
-		<!-- <div id="social-media">
-			<div class="socialMedia-containers">
-				<div id="massTLC"></div>
-				<div class="circles-2"><i class="fa fa-facebook"></i></div>
-				<div class="circles-2"><i class="fa fa-linkedin"></i></div>
-				<div class="circles-2"><i class="fa fa-twitter"></i></div>
-			</div>
 
-			
-			<div class="socialMedia-containers">
-				<h5 id="latest-tweets">LATEST TWEETS</h5>
-				<p class="keep-left">At #HIMSS16 Massachusetts Leades #HealthIT Into Next Stage of #dataanalitics & #ValueBased care by @janicemccallum https://t.co/oMH2rVbeHy</p>
-				<p class="keep-left">At #HIMSS16 Massachusetts Leades #HealthIT Into Next Stage of #dataanalitics & #ValueBased care by @janicemccallum https://t.co/oMH2rVbeHy</p>
-			</div>
-			
-			<div class="socialMedia-containers">
-				<h5 id="flickr">FLICKR</h5>
-				<div id="flickr-container">
-					<div class="flickr-imgs"></div>
-					<div class="flickr-imgs"></div>
-					<div class="flickr-imgs"></div>
-					<div class="flickr-imgs"></div>
-					<div class="flickr-imgs"></div>
-					<div class="flickr-imgs"></div>
-				</div>
-			</div>
-		</div> -->
 
 		
 		<div class="bottom-footer">
