@@ -13,22 +13,35 @@
 
 	</div><!-- #content -->
 
-	<!-- <footer id="colophon" class="site-footer" role="contentinfo">
+	 <footer id="colophon" class="site-footer main-container" role="contentinfo">
+	
+	<div class="inner-content">
+	<div>
+		<img src="http://www.masstlcawards.com/wp-content/uploads/2016/04/MassTLC_logo.png">
+		<a href="https://www.facebook.com/masstlc"><i class="fa fa-facebook social-media-icon"></i></a>
+		<a href="https://www.linkedin.com/company/mass-technology-leadership-council"><i class="fa fa-linkedin social-media-icon"></i></a>
+		<a href="https://twitter.com/MassTLC"><i class="fa fa-twitter social-media-icon"></i></a>
+	</div>
+	<div></div>
+	<div></div>
 
-		<div class="site-info">
-			<a href="
-			<?php echo esc_url( __( 'https://wordpress.org/', 'masstlcawards' ) ); ?>
-			">
-			<?php 
-			// printf( esc_html__( 'Proudly powered by %s', 'masstlcawards' ), 'WordPress' ); 
-			?>
-			</a> 
-			<span class="sep"> | </span>
-			<?php 
-			// printf( esc_html__( 'Theme: %1$s by %2$s.', 'masstlcawards' ), 'masstlcawards', '<a href="http://underscores.me/" rel="designer">Resilient Labs</a>' ); 
-			?>
-		</div>.site-info
-	</footer> #colophon -->
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+	
+	</footer> <!-- #colophon
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

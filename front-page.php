@@ -307,7 +307,7 @@ get_header(); ?>
 			Copyright <script type="text/javascript">
   			document.write(new Date().getFullYear());
 			</script> 
-			MassLTC. All Rights Reserved. Built by a <a href="http://resilientcoders.org" target="_blank">Resilient Coder</p>
+			MassLTC. All Rights Reserved. Built by a <a href="http://resilientcoders.org" target="_blank">Resilient Coder</p></a>
 		</div>
 
 
