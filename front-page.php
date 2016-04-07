@@ -142,7 +142,7 @@ get_header(); ?>
 			</div>
 
 				
-			
+
 			
 		</div>
 	</div>
@@ -200,20 +200,31 @@ get_header(); ?>
 
 	<!-- INDIVIDUAL AWARDS -->
 	<div id="awards" class="main-container">
-		<div class="inner-content">
+		<div class='inner-content'>
 			<h2>Individual Awards</h2>
 			<hr>
 			<?php
 			$query = new WP_query('category_name=individual-categories');
+			$count = 0;
 			//THE LOOP
 			if($query->have_posts()){
 				while ($query->have_posts()){
+					
+					if ($count % 3 == 0) {
+						echo "<div class='category-container'>";
+					}
 					$query->the_post();
 					echo "<div class='category'>";
 					the_post_thumbnail();
 					echo "<div><h3>" . get_the_title() . "</h3><p>";
 					the_content();
 					echo "</p></div></div>";
+					$count++;
+
+					if ($count % 3 == 0) {
+						echo "</div><!--end category-container-->";
+					}
+
 				}
 			}
 			wp_reset_postdata();
@@ -222,15 +233,25 @@ get_header(); ?>
 			<hr>
 			<?php
 			$query = new WP_query('category_name=organizational-categories');
+			$count = 0;
 			//THE LOOP
 			if($query->have_posts()){
 				while ($query->have_posts()){
+					if ($count % 3 == 0) {
+						echo "<div class='category-container'>";
+					}
+
 					$query->the_post();
 					echo "<div class='category'>";
 					the_post_thumbnail();
 					echo "<div><h3>" . get_the_title() . "</h3><p>";
 					the_content();
 					echo "</p></div></div>";
+					$count++;
+					
+					if ($count % 3 == 0) {
+						echo "</div><!--end category-container-->";
+					}
 				}
 			}
 			wp_reset_postdata();
@@ -239,23 +260,30 @@ get_header(); ?>
 			<hr>
 			<?php
 			$query = new WP_query('category_name=innovation-categories');
+			$count = 0;
 			//THE LOOP
 			if($query->have_posts()){
 				while ($query->have_posts()){
+					if ($count % 3 == 0) {
+						echo "<div class='category-container'>";
+					}
+
 					$query->the_post();
 					echo "<div class='category'>";
 					the_post_thumbnail();
 					echo "<div><h3>" . get_the_title() . "</h3><p>";
 					the_content();
 					echo "</p></div></div>";
+					$count++;
+
+					if ($count % 3 == 0) {
+						echo "</div><!--end category-container-->";
+					}
 				}
 			}
 			wp_reset_postdata();
 			?>
-
-
-		</div>
-
+		</div><!-- END INNER CONTENT -->
 
 	</div>
 

@@ -464,6 +464,9 @@ iframe{
 	float: left;
 	width: 100%;
 }
+.category-container{
+	float:left;
+}
 
 .category{
 	width:33%;
@@ -483,6 +486,7 @@ iframe{
     width: calc(100% - 120px);
     padding-right:20px;
 }
+
 
 
 
@@ -727,12 +731,6 @@ footer {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
-}
-
-
-.inner-content div {
-	width: 300px;
-	float: left;
 }
 
 footer .inner-content a {
