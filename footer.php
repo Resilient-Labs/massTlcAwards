@@ -17,7 +17,7 @@
 	
 	<div class="inner-content">
 		<div class="footer-social-media">
-			<img src="http://www.masstlcawards.com/wp-content/uploads/2016/04/MassTLC_logo.png">
+			<img class="MassTLC-footer-logo" src="http://www.masstlcawards.com/wp-content/uploads/2016/04/MassTLC_logo.png">
 			<a href="https://www.facebook.com/masstlc"><i class="fa fa-facebook social-media-icon"></i></a>
 			<a href="https://www.linkedin.com/company/mass-technology-leadership-council"><i class="fa fa-linkedin social-media-icon"></i></a>
 			<a href="https://twitter.com/MassTLC"><i class="fa fa-twitter social-media-icon"></i></a>

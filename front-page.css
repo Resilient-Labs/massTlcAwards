@@ -757,8 +757,9 @@ footer .inner-content a:hover, .button:hover, .become-sponsor-insideColumns a:ho
 	color:none;
 }
 
-footer .inner-content img {
-	display: inherit;
+.MassTLC-footer-logo {
+	float: left;
+	margin-right: 55px;
 }
 
 .footer-social-media h3 {
