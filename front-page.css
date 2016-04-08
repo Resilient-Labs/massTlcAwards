@@ -598,23 +598,23 @@ iframe{
 
 i.fa.fa-facebook {
 	color: white;
-	font-size: 50px;
-	margin-top: 20px;
-	margin-left: 45px;
+	font-size: 25px;
+	margin-top: 30px;
+	margin-left: 25px;
 }
 
 i.fa.fa-linkedin {
 	color: white;
-	font-size: 50px;
-	margin-top: 20px;
-	margin-left: 22px;
+	font-size: 25px;
+	margin-top: 30px;
+	margin-left: 15px;
 }
 
 i.fa.fa-twitter {
 	color: white;
-	font-size: 50px;
-	margin-top: 20px;
-	margin-left: 22px;
+	font-size: 25px;
+	margin-top: 30px;
+	margin-left: 15px;
 }
 
 #latest-tweets {
@@ -711,15 +711,15 @@ i.fa.fa-twitter {
 
 
 footer {
-	height: 500px;
+
 }
 
 
 .social-media-icon {
 	text-align: center;
     position: relative;
-    width: 70px;
-    height: 70px;
+    width: 45px;
+    height: 45px;
     transform: translate(-50%,0);
     display: block;
     float: left;
@@ -731,6 +731,11 @@ footer {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
+}
+
+.footer-social-media {
+	float: left;
+	width: 33.333%;
 }
 
 footer .inner-content a {
@@ -751,6 +756,41 @@ footer .inner-content a:hover, .button:hover, .become-sponsor-insideColumns a:ho
 	text-decoration: none;
 	color:none;
 }
+
+footer .inner-content img {
+	display: inherit;
+}
+
+.footer-social-media h3 {
+	text-align: left;
+}
+
+.footer-social-media div {
+	width: 100%;
+}
+
+.footer-social-media img {
+	width: 210px;
+}
+
+.footer-social-media #flickr-image-container {
+	width: 280px;
+}
+
+.footer-social-media #flickr-image-container div {
+	background-color: gray;
+	float: left;
+	width: 45.5%;
+	height: 80px;
+	margin: 0px 5px 5px 0;
+}
+
+#davon{
+    text-align: center;
+
+}
+
+
 
 
 
