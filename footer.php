@@ -17,7 +17,7 @@
 	
 	<div class="inner-content">
 		<div class="footer-social-media">
-			<img class="MassTLC-footer-logo" src="http://www.masstlcawards.com/wp-content/uploads/2016/04/MassTLC_logo.png">
+			<img class="massTLC-footer-logo" src="http://www.masstlcawards.com/wp-content/uploads/2016/04/MassTLC_logo.png">
 			<a href="https://www.facebook.com/masstlc"><i class="fa fa-facebook social-media-icon"></i></a>
 			<a href="https://www.linkedin.com/company/mass-technology-leadership-council"><i class="fa fa-linkedin social-media-icon"></i></a>
 			<a href="https://twitter.com/MassTLC"><i class="fa fa-twitter social-media-icon"></i></a>
@@ -33,39 +33,54 @@
 		<div class="footer-social-media">
 			<h3>FLICKR</h3>
 			<div id="flickr-image-container">
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
+				
+					<?php
+
+					require_once('flickr.php'); 
+					$Flickr = new Flickr('11ab26be129cfecfa3242c54a9c6d66c'); 
+					$data = $Flickr->search('', 'masstlc', 6); 
+					foreach($data['photos']['photo'] as $photo) { 
+						// the image URL becomes somthing like 
+						// http://farm{farm-id}.static.flickr.com/{server-id}/{id}_{secret}.jpg  
+						echo '<a href="https://www.flickr.com/photos/masstlc/'.$photo["id"].'/in/dateposted-public/">
+								<div>
+									<img src="' . 'http://farm' . $photo["farm"] . '.static.flickr.com/' . $photo["server"] . '/' . $photo["id"] . '_' . $photo["secret"] . '.jpg">
+								</div>
+							</a>'; 
+					} 
+					?>
+
+					
+			
 			</div>
 		</div>
-	</div>
 
 
-	<script type="text/javascript">
-	var tweets = [];
-	//Snag last 30 the tweets from @shitdavonsays
-	$.getJSON('/wp-content/themes/massTlcAwards/tweets_json.php?count=30&screen_name=shitdavonsays', function(data){
-		var dataNum = data.length;
-		$.each(data, function(index, value){
-			tweets.push(value.text);
-			if (tweets.length === dataNum) {
-				//channel Davon's mind after all the data has loaded
-				newQuote();
-			}
-		});
+	<script>
+		
+		var images =     document.getElementsByClassName("image-holder");
 
-	});	
-	//Gimmie a random tweet
-	var newQuote = function(){
-		console.log("running");
-		var rand = Math.floor(Math.random() * tweets.length - 1);
-		$("#davon").text(tweets[rand]);
-	}
-	
-	
+		for (var i = 0; i < images.length; i++)
+		{
+		  var imageholder =
+		      images[i];
+		  
+		  var element = 
+		      imageholder.children[0];
+		var height =
+		    element.offsetHeight;
+		var width = 
+		    element.offsetWidth;
+		
+		if (width > height) {
+		 imageholder.className += " wider-than-it-is-taller";
+		}
+
+		else if (height > width) {
+		 imageholder.className += " higher-than-it-is-wider";
+		}
+		}
+
 	</script>
 
 
