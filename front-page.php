@@ -201,33 +201,38 @@ get_header(); ?>
 	<!-- INDIVIDUAL AWARDS -->
 	<div id="awards" class="main-container">
 		<div class='inner-content'>
-			<h2>Individual Awards</h2>
-			<hr>
+<!-- 			<h2>Individual Awards</h2>
+			<hr> -->
 			<?php
-			$query = new WP_query('category_name=individual-categories');
-			$count = 0;
-			//THE LOOP
-			if($query->have_posts()){
-				while ($query->have_posts()){
+			$descendants = get_categories(array('child_of' +> 7));
+			foreach($descendants as $child){
+				$query = new WP_query('category_name='.$child->cat_name.'');
+				$count = 0;
+				echo "<h2>".$child->cat_name."</h2>" ;
+				echo "<hr>";
+				//THE LOOP
+				if($query->have_posts()){
+					while ($query->have_posts()){
 					
-					if ($count % 3 == 0) {
-						echo "<div class='category-container'>";
-					}
-					$query->the_post();
-					echo "<div class='category'>";
-					the_post_thumbnail();
-					echo "<div><h3>" . get_the_title() . "</h3><p>";
-					the_content();
-					echo "</p></div></div>";
-					$count++;
+						if ($count % 3 == 0) {
+							echo "<div class='category-container'>";
+						}
+						$query->the_post();
+						echo "<div class='category'>";
+						the_post_thumbnail();
+						echo "<div><h3>" . get_the_title() . "</h3><p>";
+						the_content();
+						echo "</p></div></div>";
+						$count++;
 
-					if ($count % 3 == 0) {
-						echo "</div><!--end category-container-->";
+						if ($count % 3 == 0) {
+							echo "</div><!--end category-container-->";
+						}
 					}
-
 				}
+				wp_reset_postdata();
 			}
-			wp_reset_postdata();
+			
 			?>
 			<h2>Organizational Categories</h2>
 			<hr>
