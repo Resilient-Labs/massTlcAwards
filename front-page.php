@@ -215,8 +215,6 @@ get_header(); ?>
 		</div>
 		</div>
 	</div> -->
-
-
 	
 
 	<!-- SAVE THE DATES -->
