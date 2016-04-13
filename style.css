@@ -567,7 +567,7 @@ a:active {
     /* transform: translate(0,-50%); */
     width: auto;
     bottom: 50%;
-    margin: 12px 0px 0px 20px;
+    margin: 28px 0px 0px 0px;
 }
 
 .main-navigation ul {
@@ -577,7 +577,10 @@ a:active {
 	padding-left: 0;
 	float:right;
 }
-.main-navigation ul li:last-child{
+/*
+REGISTER BUTTON STYLES
+*/
+/*.main-navigation ul li:last-child{
 	margin:5px;
 	padding:15px;
 	width:110px;
@@ -587,18 +590,22 @@ a:active {
 }
 .main-navigation ul li:last-child a{
 	color:#FFF;
-}
+}*/
 
 .main-navigation li {
 	float: left;
 	position: relative;
+	margin: 40px 20px;
 	
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-	color:#4A3651;
+	color:#404040;
+}
+.main-navigation a:hover {
+	color:#58A618;
 }
 
 .main-navigation ul ul {

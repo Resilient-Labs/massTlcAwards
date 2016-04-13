@@ -13,7 +13,9 @@
 <html <?php language_attributes(); ?>>
 <head>
 
-<?php include('/wp-content/themes/massTlcAwards/flickr_script_file.php'); ?>
+<?php 
+	include('/wp-content/themes/massTlcAwards/flickr_script_file.php');
+ ?> 
 
 <script src="https://query.yahooapis.com/v1/public/yql?q=select * from flickr.photos.search where api_key='11ab26be129cfecfa3242c54a9c6d66c'&format=json&callback=yqlCallback"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -51,6 +53,7 @@
 		<!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div class="inner-content">
 				<img src="http://www.masstlcawards.com/wp-content/uploads/2016/04/MassTLC_logo.png">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'masstlcawards' ); ?></button>
 				<?php 
@@ -60,6 +63,7 @@
 					wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); 
 				}
 				?>
+			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
