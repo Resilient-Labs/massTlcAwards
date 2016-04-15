@@ -56,9 +56,9 @@ get_header(); ?>
 
 								echo "<div class='category'>";
 								the_post_thumbnail();
-								echo "<div><h3>" . get_the_title() . "</h3><p>";
+								echo "<h3>" . get_the_title() . "</h3><p>";
 								the_content();
-								echo "</p></div></div>";
+								echo "</p></div>";
 								$count++;
 								
 
@@ -244,15 +244,24 @@ get_header(); ?>
 		</div>
 	</div>
 	<!-- CONTACT FORM -->
-	<!-- <div id="msg" class="main-container">
+	<div id="msg" class="main-container">
 			<div class="inner-content">
-				<textarea class="fill-textarea" placeholder="Name"></textarea>
-				<h6 class="fill-info">Email*</h6>
-				<textarea class="fill-textarea" placeholder="Email"></textarea>
-				<textarea id="message" placeholder="How can we help you?"></textarea>
-				<a class="button" id="send-msg">Send Message</a>
+				<?php
+					$query = new WP_query('pagename=contact-us');
+					//THE LOOP
+					if($query->have_posts()){
+						while ($query->have_posts()){
+
+							$query->the_post();
+							
+							the_content();
+					
+						}
+					}
+					wp_reset_postdata();
+				?>
 			</div>
-	</div> -->
+	</div>
 
 	<!-- 	ABOUT SECTION-->	
 	<div id="container-2" class="main-container">
