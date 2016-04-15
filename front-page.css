@@ -731,6 +731,13 @@ form input[type="text"], form input[type="email"], form textarea {
     color:#FFF;
     text-shadow: 0px 0px 10px rgba(0,0,0,.6)
 }
+#recaptcha iframe {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform:translate(-50%, 0);
+}
+
 .fill-textarea{
 	
 }
