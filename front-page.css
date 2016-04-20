@@ -945,6 +945,11 @@ footer .inner-content a:hover, .button:hover, .become-sponsor-insideColumns a:ho
 		width: 100%;
 	}
 
+
+	.footer-social-media {
+		width: 100%;
+	}
+
 }
 
 
@@ -1076,6 +1081,8 @@ footer .inner-content a:hover, .button:hover, .become-sponsor-insideColumns a:ho
 		width: 100%;
 		margin-left: 3px;
 	}
+
+
 }
 
 
