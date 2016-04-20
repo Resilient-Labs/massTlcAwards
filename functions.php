@@ -126,6 +126,14 @@ function masstlcawards_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'masstlcawards_scripts' );
 
+add_filter('get_the_categories','get_the_category_sort_by_id');
+
+function get_the_category_sort_by_id( $categories ) {
+
+  usort($categories, '_usort_terms_by_ID');
+
+  return $categories;
+}
 /**
  * Implement the Custom Header feature.
  */

@@ -12,11 +12,12 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 <main id="main" class="site-main" role="main">
-	<a href="#awards" id="banner" class="main-container">
+	<!-- NOMINATIONS OPEN BANNER -->
+	<!-- <a href="#awards" id="nominations-banner" class=" banner main-container">
 		<div class="inner-container">
 			<h2>Nominations Are Now Open!</h2>
 		</div>
-	</a>
+	</a> -->
 
 	<?php
 		$query = new WP_query('pagename=intro-video');
@@ -25,27 +26,38 @@ get_header(); ?>
 			while ($query->have_posts()){
 
 				$query->the_post();
-				echo "<div id='container-1' class='main-container'><div class='inner-content'>";
+				echo "<div id='container-1'>";
+				echo "<div class='banner main-container' id='intro-banner'><div class='inner-content'>";
 				echo "<h1>" . get_the_title() . "</h1>";
-				the_content();
 				echo "</div></div>";
+				the_content();
+				echo "</div>";
 			}
 		}
 		wp_reset_postdata();
 	?>
+	<a href="#awards" class="banner main-container">
+		<div class="inner-container">
+			<h2>Award Categories</h2>
+		</div>
+	</a>
 	<!-- AWARDS -->
 	<div id="awards" class="main-container">
 		<div class='inner-content'>
 
 			<?php 
 				$descendants = get_categories(array('child_of' => 0));
-			
-				foreach ($descendants as $child) {
+				// LOOP THROUGH DESCENDENTS IN DESIRED ORDER
+				$order = array(2, 4, 3, 0);
+				for($i = 0; $i < count($order); $i++) {
+					$child = $descendants[$order[$i]];
 					$count = 0;
 					$isEnded = false;
 						if($child->cat_name !== "Category"){
 						echo '<h2>' . $child->cat_name . '</h2><hr>';
-						$query = new WP_Query("category_name=" . $child->cat_name . ""); 
+						$query = new WP_Query("category_name=" . $child->cat_name . "&orderby=title&order=asc"); 
+						// $query->set( 'orderby', 'title' );
+						// $query->set( 'order', 'ASC' );
 							while($query->have_posts()){
 								$query->the_post();
 
@@ -56,18 +68,15 @@ get_header(); ?>
 
 								echo "<div class='category'>";
 								the_post_thumbnail();
-								echo "<h3>" . get_the_title() . "</h3><p>";
+								echo "<h3>" . get_the_title() . "</h3>";
 								the_content();
-								echo "</p></div>";
+								echo "</div>";
 								$count++;
-								
-
 
 								if ($count % 3 == 0) {
 									echo "</div><!--end category-container-->";
 									$isEnded = true;
 								}
-							
 								
 							}
 							if(!$isEnded){
@@ -81,6 +90,32 @@ get_header(); ?>
 			
 			
 		</div><!-- END INNER CONTENT -->
+	</div>
+	<!-- SAVE THE DATES -->
+	<div id="dates" class="main-container">
+		<div class="inner-content">
+		<h2 id="saveTheDates">Save The Dates</h2><hr class='white' />
+			<div class="dates-containers">
+				<h5 class="dates-h5-style"><span><i class="fa fa-calendar-o"></i></span> April 18 - May 20</h5>
+				<p class="dates-p-style"><span><i class="fa fa-trophy"></i></span> Awards Nominations Open</p>
+				<!-- <p class="dates-p-style"><span><i class="fa fa-map-marker"></i></span> MassTLCAwards.com</p> -->
+			</div>
+			<div class="dates-containers">
+				<h5 class="dates-h5-style"><span><i class="fa fa-calendar-o"></i></span> June 30th</h5>
+				<p class="dates-p-style"><span><i class="fa fa-trophy"></i></span> Judging Night</p>
+				<p class="dates-p-style"><span><i class="fa fa-map-marker"></i></span> Rocket Software, Waltham</p>
+			</div>
+			<div class="dates-containers">
+				<h5 class="dates-h5-style"><span><i class="fa fa-calendar-o"></i></span> July 31st</h5>
+				<p class="dates-p-style"><span><i class="fa fa-trophy"></i></span> Summer Reception</p>
+				<p class="dates-p-style"><span><i class="fa fa-map-marker"></i></span> Microsoft NERD, Cambridge</p>
+			</div>
+			<div class="dates-containers">
+				<h5 class="dates-h5-style"><span><i class="fa fa-calendar-o"></i></span> June 30th</h5>
+				<p class="dates-p-style"><span><i class="fa fa-trophy"></i></span> Awards Gala</p>
+				<p class="dates-p-style"><span><i class="fa fa-map-marker"></i></span> Seaport World Trade Center</p>
+			</div>
+		</div>
 	</div>
 	<!-- SPONSORS -->
 	<div id="sponsors" class="main-container">
@@ -109,7 +144,22 @@ get_header(); ?>
 			while ($query->have_posts()){
 				$query->the_post();
 				echo "<h2>" . get_the_title() . "</h2>";
-				echo "<div id='platinum-container2' class='inner-content'>";
+				echo "<div id='gold-container' class='inner-content'>";
+				echo "<hr />";
+				the_content();
+				echo "</div>";
+			}
+		}
+		wp_reset_postdata();
+		?>
+		<?php
+		$query = new WP_query('pagename=silver-sponsors');
+		//THE LOOP
+		if($query->have_posts()){
+			while ($query->have_posts()){
+				$query->the_post();
+				echo "<h2>" . get_the_title() . "</h2>";
+				echo "<div id='silver-container' class='inner-content'>";
 				echo "<hr />";
 				the_content();
 				echo "</div>";
@@ -119,6 +169,7 @@ get_header(); ?>
 		?>
 	</div>
 	
+	<!-- BECOME A SPONSOR -->
 	<div id="become-sponsor">
 		<div id="become-sponsor-insideContainer" class="inner-content">
 			<!-- <div class="become-sponsor-insideColumns"> -->
@@ -217,32 +268,7 @@ get_header(); ?>
 	</div> -->
 	
 
-	<!-- SAVE THE DATES -->
-	<div id="dates" class="main-container">
-		<div class="inner-content">
-		<h2 id="saveTheDates">Save The Dates</h2><hr class='white' />
-			<div class="dates-containers">
-				<h5 class="dates-h5-style"><span><i class="fa fa-calendar-o"></i></span> April 18 - May 20</h5>
-				<p class="dates-p-style"><span><i class="fa fa-trophy"></i></span> Awards Nominations Open</p>
-				<p class="dates-p-style"><span><i class="fa fa-map-marker"></i></span> MassTLCAwards.com</p>
-			</div>
-			<div class="dates-containers">
-				<h5 class="dates-h5-style"><span><i class="fa fa-calendar-o"></i></span> June 30th</h5>
-				<p class="dates-p-style"><span><i class="fa fa-trophy"></i></span> Judging Night</p>
-				<p class="dates-p-style"><span><i class="fa fa-map-marker"></i></span> Rocket Software, Waltham</p>
-			</div>
-			<div class="dates-containers">
-				<h5 class="dates-h5-style"><span><i class="fa fa-calendar-o"></i></span> July 31st</h5>
-				<p class="dates-p-style"><span><i class="fa fa-trophy"></i></span> Summer Reception</p>
-				<p class="dates-p-style"><span><i class="fa fa-map-marker"></i></span> Microsoft NERD, Cambridge</p>
-			</div>
-			<div class="dates-containers">
-				<h5 class="dates-h5-style"><span><i class="fa fa-calendar-o"></i></span> June 30th</h5>
-				<p class="dates-p-style"><span><i class="fa fa-trophy"></i></span> Awards Gala</p>
-				<p class="dates-p-style"><span><i class="fa fa-map-marker"></i></span> Seaport World Trade Center</p>
-			</div>
-		</div>
-	</div>
+	
 	<!-- CONTACT FORM -->
 	<div id="msg" class="main-container">
 			<div class="inner-content">

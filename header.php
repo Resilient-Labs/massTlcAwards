@@ -27,7 +27,7 @@ include('/wp-content/themes/massTlcAwards/flickr_script_file.php');
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="stylesheet" type="text/css" href="/wp-content/themes/massTlcAwards/front-page.css">
-<link rel="stylesheet" type="text/css" href="/wp-content/themes/massTlcAwards/font-awesome.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <?php wp_head(); ?>
 </head>
@@ -56,7 +56,7 @@ include('/wp-content/themes/massTlcAwards/flickr_script_file.php');
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="inner-content">
-				<img src="http://www.masstlcawards.com/wp-content/uploads/2016/04/MassTLC_logo.png">
+				<img src="http://www.masstlcawards.com/wp-content/uploads/2016/04/MassTLC_logo2.png">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'masstlcawards' ); ?></button>
 				<?php 
 				if (is_front_page()){
