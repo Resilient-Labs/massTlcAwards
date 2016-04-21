@@ -18,17 +18,14 @@ body {
 
 p {
 	
-	/*text-align: center;*/
 	font-size: 11pt;
 }
 
 h1 {
-	/*width: 50%;*/
 	color:#FFF;
 	text-align: center;
 	margin: 0 auto;
 
-	text-shadow: 0px 0px 10px rgba(0,0,0,.6);
 }
 
 h2 {
