@@ -92,31 +92,52 @@ get_header(); ?>
 		</div><!-- END INNER CONTENT -->
 	</div>
 	<!-- SAVE THE DATES -->
+	
+
 	<div id="dates" class="main-container">
 		<div class="inner-content">
-		<h2 id="saveTheDates">Save The Dates</h2><hr class='white' />
-			<div class="dates-containers">
-				<h5 class="dates-h5-style"><span><i class="fa fa-calendar-o"></i></span> April 18 - May 20</h5>
-				<p class="dates-p-style"><span><i class="fa fa-trophy"></i></span> Awards Nominations Open</p>
-				<!-- <p class="dates-p-style"><span><i class="fa fa-map-marker"></i></span> MassTLCAwards.com</p> -->
-			</div>
-			<div class="dates-containers">
-				<h5 class="dates-h5-style"><span><i class="fa fa-calendar-o"></i></span> June 30th</h5>
-				<p class="dates-p-style"><span><i class="fa fa-trophy"></i></span> Judging Night</p>
-				<p class="dates-p-style"><span><i class="fa fa-map-marker"></i></span> Rocket Software, Waltham</p>
-			</div>
-			<div class="dates-containers">
-				<h5 class="dates-h5-style"><span><i class="fa fa-calendar-o"></i></span> July 31st</h5>
-				<p class="dates-p-style"><span><i class="fa fa-trophy"></i></span> Summer Reception</p>
-				<p class="dates-p-style"><span><i class="fa fa-map-marker"></i></span> Microsoft NERD, Cambridge</p>
-			</div>
-			<div class="dates-containers">
-				<h5 class="dates-h5-style"><span><i class="fa fa-calendar-o"></i></span> June 30th</h5>
-				<p class="dates-p-style"><span><i class="fa fa-trophy"></i></span> Awards Gala</p>
-				<p class="dates-p-style"><span><i class="fa fa-map-marker"></i></span> Seaport World Trade Center</p>
-			</div>
+		<h2 class="saveTheDates">Save The Dates</h2><hr class='white' />
+
+		<?php  
+				$descendants = get_categories(array('child_of' => 1));
+			
+				foreach ($descendants as $child) {
+					$count = 1;
+					$isEnded = false;
+						if($child->cat_name !== "Category"){
+						$query = new WP_Query("category_name=" . $child->cat_name . ""); 
+							while($query->have_posts()){
+								$query->the_post();
+						}
+
+						echo "<div class='category'>";
+						the_post_thumbnail();
+						echo "<h3>" . get_the_title() . "</h3>";
+						the_content();
+						echo "</div>";
+					}
+				}
+			wp_reset_postdata();
+		?>
+
 		</div>
 	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<!-- SPONSORS -->
 	<div id="sponsors" class="main-container">
 		<?php
