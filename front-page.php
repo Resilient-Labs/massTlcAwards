@@ -100,8 +100,11 @@ get_header(); ?>
 			
 	
 	<!-- SAVE THE DATES -->
+	
+
 	<div id="dates" class="main-container">
 		<div class="inner-content">
+<<<<<<< HEAD
 		<h2 id="saveTheDates">Save The Dates</h2><hr class='white' />
 		<?php 
 			$args = array(
