@@ -56,14 +56,12 @@ include('/wp-content/themes/massTlcAwards/flickr_script_file.php');
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="inner-content">
-				<img src="http://www.masstlcawards.com/wp-content/uploads/2016/04/MassTLC_logo2.png">
+				<a href="http://www.masstlcawards.com"><img src="http://www.masstlcawards.com/wp-content/uploads/2016/04/MassTLC_logo2.png"></a>
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'masstlcawards' ); ?></button>
 				<?php 
-				if (is_front_page()){
+				
 					wp_nav_menu ( array( 'menu' => 'Front Page Menu'));
-				}else{
-					wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); 
-				}
+				
 				?>
 			</div>
 		</nav><!-- #site-navigation -->

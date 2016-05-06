@@ -1,6 +1,6 @@
 <?php
 /**
- * Don't have a template name is these are not used
+ * 
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -54,7 +54,7 @@ get_header(); ?>
 		
 		//loop through finalists
 		$args = array(
-			'category_name' => 'finalists',
+			'category_name' => 'winners',
 			'orderby'       => 'name',
 			'order'         => 'ASC'
 		);

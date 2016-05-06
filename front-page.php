@@ -13,6 +13,7 @@ get_header(); ?>
 <div id="modal"></div>
 <div id="primary" class="content-area">
 <main id="main" class="site-main" role="main">
+
 	<?php
 		$query = new WP_query('pagename=intro-video');
 		//THE LOOP
@@ -20,11 +21,21 @@ get_header(); ?>
 			while ($query->have_posts()){
 
 				$query->the_post();
+
+				//stuff to make the top banner an editable link
 				echo "<div id='container-1'>";
-				echo "<a href='#awards' class='banner main-container' id='intro-banner'><div class='inner-content'>";
+				$bannerLink = 7 + strpos($post->post_content, "-->");
+				$bannerLinkContent = substr($post->post_content,$bannerLink);
+				if (!empty($bannerLinkContent)) {
+					echo "<a href='".$bannerLinkContent."' class='banner main-container' id='intro-banner'><div class='inner-content'>";
+					
+				}else{
+					echo "<a href='#awards' class='banner main-container' id='intro-banner'><div class='inner-content'>";
+				}
+				
 				echo "<h1>" . get_the_title() . "</h1>";
 				echo "</div></a>";
-				the_content();
+				the_content("", false);
 				echo "</div>";
 			}
 		}
@@ -33,39 +44,27 @@ get_header(); ?>
 
 	
 	
-
+			<!-- AWARDS -->
 			<?php 
-				$descendants = get_categories(array('child_of' => 0));
+				$descendants = get_categories(array('child_of' => 5));
 				if ( !empty($descendants) ) {
+				
+				echo ' <a href="#awards" class="banner main-container">';
+					echo ' <div class="inner-container">';
+						echo ' <h2>Award Categories</h2>';
+					echo ' </div>';
+				echo ' </a>';
 
-				?>
-				<!-- AWARDS -->
-				<a href="#awards" class="banner main-container">
-					<div class="inner-container">
-						<h2>Award Categories</h2>
-					</div>
-				</a>
+				echo ' <div id="awards" class="main-container">';
+				echo ' <div class="inner-content">';
+		
 
-				<!-- INDIVIDUAL WINNERS -->
-				<div id="awards" class="main-container">
-				<div class="inner-content">
-				<?php
-					// LOOP THROUGH DESCENDENTS IN DESIRED ORDER
-					// CATEGORY IDS:
-					// 0: Best use of technology
-					// 1: Category
-					// 2: Individual Categories
-					// 3: Innovations
-					// 4: Organizational Categories
-
-					$order = array(2, 4, 3, 0);
-					for($i = 0; $i < count($order); $i++) {
-						$child = $descendants[$order[$i]];
+					foreach($descendants as $child) {
 						$count = 0;
 						$isEnded = false;
 							if($child->cat_name !== "Category"){
 							echo '<h2>' . $child->cat_name . '</h2><hr>';
-							$query = new WP_Query("category_name=" . $child->cat_name . "&orderby=title&order=asc"); 
+							$query = new WP_Query("category_name=" . $child->cat_name); 
 							// $query->set( 'orderby', 'title' );
 							// $query->set( 'order', 'ASC' );
 							echo "<div class='category-container'>\n";
@@ -74,7 +73,6 @@ get_header(); ?>
 									$surveyLink = 7 + strpos($post->post_content, "-->");
 									$surveyLinkContent = '"' . substr($post->post_content,$surveyLink) . '"';
 									if (!empty($surveyLinkContent)) {
-										
 										echo "<div class='category' onClick = 'loadSurvey(". $surveyLinkContent .");'>";
 										
 									}else{
@@ -84,16 +82,13 @@ get_header(); ?>
 									echo "<h3>" . get_the_title() . "</h3>";
 									the_content("", false);
 									echo "</div>";
-									
 									$count++;
-							
 								}
 							echo "</div><!--end category-container-->";
 						}
 					}
 					echo "</div><!-- END INNER CONTENT --></div>";
 				}
-
 				wp_reset_postdata(); 
 			?>
 			
@@ -104,7 +99,6 @@ get_header(); ?>
 
 	<div id="dates" class="main-container">
 		<div class="inner-content">
-<<<<<<< HEAD
 		<h2 id="saveTheDates">Save The Dates</h2><hr class='white' />
 		<?php 
 			$args = array(
@@ -244,52 +238,56 @@ get_header(); ?>
 
 
 	<!-- ABOUT THE GALA SECTION -->
-	<!-- <div id="container-3" class="main-container">
-		<div class="inner-content">
-		<div class="column-5">
-			<?php
-		// 	$query = new WP_query('pagename=about-the-event');
-		// 	//THE LOOP
-		// 	if($query->have_posts()){
-		// 		while ($query->have_posts()){
-		// 			$query->the_post();
+	<!-- <div id="about-the-gala" class="main-container">-->
+		
+		<?php
+			$query = new WP_query('pagename=about-the-event');
+			//THE LOOP
+			if($query->have_posts()){
+				echo '<div id="about-the-gala" class="main-container"><div class="inner-content"><div class="column-5">';
+				while ($query->have_posts()){
+					$query->the_post();
 
-		// 			echo "<h2>" . get_the_title() . "</h2>";
-		// 			echo "<p>";
+					echo "<h2>" . get_the_title() . "</h2>";
+					echo "<p>";
 					
-		// 			the_content();
-		// 			echo "</p>";
-		// 		}
-		// 	}
-		// 	wp_reset_postdata();
-		// 	?>
+					the_content();
+					echo "</p>";
+				}
+				echo'</div>';
+			}
+			
+			wp_reset_postdata();
+		?>
 
-		// </div>
 
-		// <div class="column-6">
+		
 			
 			
-		// 	<?php
-		// 	$query = new WP_query('pagename=reasons-to-purchase-a-table');
-		// 	//THE LOOP
-		// 	if($query->have_posts()){
-		// 		while ($query->have_posts()){
-		// 			$query->the_post();
+		<?php
+			$query = new WP_query('pagename=reasons-to-purchase-a-table');
+			//THE LOOP
+			if($query->have_posts()){
+				echo '<div class="column-6">';
+				while ($query->have_posts()){
+					$query->the_post();
 
-		// 			echo "<h2>" . get_the_title() . "</h2>";
+					echo "<h2>" . get_the_title() . "</h2>";
 					
-		// 			echo "<div class='list-container'>";
-		// 			the_content();
-		// 			echo "</div>";
-		// 		}
-		// 	}
-		// 	wp_reset_postdata();
-			?>
+					echo "<div class='list-container'>";
+					the_content();
+					echo "</div>";
+				}
+				echo '</div></div>';
+			}
+
+			wp_reset_postdata();
+			
+		?>
 			
 			
-		</div>
-		</div>
-	</div> -->
+		
+	</div> 
 	
 
 	

@@ -61,7 +61,7 @@
 				<script type="text/javascript">
 	  			document.write(new Date().getFullYear());
 				</script> 
-			MassTLC. All Rights Reserved. Built by a <a href="http://resilientcoders.org" target="_blank">Resilient Coder
+			MassTLC. All Rights Reserved. Built by a <a href="http://resilientcoders.org" target="_blank">Resilient Coder.
 			</p></a>
 		</div>
 

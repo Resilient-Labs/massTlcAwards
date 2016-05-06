@@ -6,223 +6,299 @@ Gray: #e3e3e3
 
 */
 
-html {
-	margin: 0;
-	padding: 0;
+html
+{
+    margin: 0;
+    padding: 0;
 }
 
-body {
-	font-family: helvetica;
-	margin: 0;
+body
+{
+    font-family: helvetica;
+
+    margin: 0;
 }
 
-p {
-	
-	font-size: 11pt;
+p
+{
+    font-size: 11pt;
 }
 
-h1 {
-	color:#FFF;
-	text-align: center;
-	margin: 0 auto;
+h1
+{
+    margin: 0 auto;
 
-}
+    text-align: center;
 
-h2 {
-	width: 100%;	
-	display: inline-block;
-	text-align: center;
-	margin: 0 auto 20px auto;
+    color: #fff;
 }
 
-li {
-	margin: 20px;
+h2
+{
+    display: inline-block;
+
+    width: 100%;
+    margin: 0 auto 20px auto;
+    font-size: 1.3em;
+
+    text-align: center;
 }
-hr {
-	width: 80%;
-	max-width: 640px;
+
+li
+{
+    margin: 0 0 20px 20px;
 }
-iframe{
+hr
+{
+    width: 80%;
+    max-width: 640px;
+}
+iframe
+{
+    display: block;
+
     width: 100%;
     height: 60vh;
     margin: 0 auto;
-    display: block;
 }
-#modal, #iframe{
-	opacity: 0;
-	pointer-events:none;
-	transition: .3s;
-}
-#modal.open, #iframe.open{
-	opacity: 1;
-	pointer-events: all;
-}
-#modal{
-	position: fixed;
-	z-index: 70;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+#modal,
+#iframe
+{
+    transition: .3s;
+    pointer-events: none;
 
-
-	background-color: rgba(0,0,0,.7);
+    opacity: 0;
 }
-#iframe{
-	z-index: 71;
-	width: 80%;
-	position: fixed;
-	height: 90vh;
-	top: 50%;
-	left:50%;
-	transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
+#modal.open,
+#iframe.open
+{
+    pointer-events: all;
+
+    opacity: 1;
 }
-
-
-.fixed-header {
-	background-color: white;
-	width: 100%;
-    margin: 0 auto;
+#modal
+{
     position: fixed;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
+    z-index: 70;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(0,0,0,.7);
+}
+#iframe
+{
+    position: fixed;
+    z-index: 71;
+    top: 50%;
+    left: 50%;
+
+    width: 80%;
+    height: 90vh;
+
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+
+.fixed-header
+{
+    position: fixed;
     z-index: 999;
-    top:0;
+    top: 0;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+
+    background-color: white;
+
+        -ms-box-sizing: border-box;
 }
 
 
-.nav-items {
-	margin: 41px 20px;
-	color: rgb(195,195,195);
-	float: right;
-	text-decoration: none;
-	list-style: none;
-	display: inline-block;
-}
+.nav-items
+{
+    display: inline-block;
+    float: right;
 
+    margin: 41px 20px;
 
+    list-style: none;
 
-.banner.main-container{
-	background-color: #2D6300;
-	color:#FFF; 
-	padding: 40px;
-}
-.banner.main-container h2{
-	padding: 0;
-	margin: 0 auto;
-}
-#intro-banner{
-	background-color:#44687d;
-}
-#nominations-banner{
-	margin-top:104px;
-}
-#massTLC_logo {
-	float: left;
-	margin: 15px 0 15px 80px;
-}
-.inner-content{
-	width:80%;
-	max-width: 1000px;
-	margin:0 auto;
-	text-align:left;
-}
+    text-decoration: none;
 
-.inner-content p{
-	width:100%;
-	max-width: 640px;
-	margin:0 auto;
-	text-align:left;
-}
-.button, form input[type="submit"]{
-	background-color: #2D6300;
-	font-weight:700;
-	border: 1px solid #2D6300;
-	text-decoration: none;
-	color:#FFF;
-	cursor:pointer;
-	text-align: center;
-	padding:20px;
-	transition:.3s all;
-	box-shadow: none;
-	text-shadow:none;
-}
-.button:hover, form input[type="submit"]:hover{
-	background-color: #2D6300;
-	border: 1px solid #FFF;
-	text-decoration: none;
-	color:#FFF;
-	box-shadow: none;
-	text-shadow:none;
-}
-
-.main-container{
-	padding:80px 0;
-	float:left;
-	width: 100%;
-}
-#container-1, #msg{
-	background-size:cover;
-}
-
-#container-1 {
-	background-image:url('http://www.masstlcawards.com/wp-content/uploads/2016/04/Screenshot-2016-04-19-12.13.40.png');
-	float: left;	
-	width: 100%;
-	display:block;
-	text-align:center;
-	padding: 104px 0 0 0;
-
-}
-#container-1 .inner-content p, #sponsors .inner-content p{
-	text-align:center;
-}
-#container-1 a{
-	text-decoration: none;	
-	margin:0 auto;
-	display:block;
-}
-
-.content-player {
-	background-color: white;
-	width: 60%;
-	height: 450px;
-	margin: 0 auto;
-}
-
-.register-here {
-	background-color: rgb(140,203,109);
-	width: 15%;
-	margin: 30px auto;
-	border: 2px;
-	border-color: black;
-}
-
-#rh-styles {
-	text-align: center;
-	margin: 0;
-	font-size: 14pt;
-}
-
-#t-i-o {
-	font-style: italic;
-	text-decoration: underline;
-	text-align: center;
-	color: white;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	font-size: 15pt;
+    color: rgb(195,195,195);
 }
 
 
 
-#container-2 {
-	background-color: #e3e3e3;
-	float: left;
-	width: 100%;		
+.banner.main-container
+{
+    padding: 40px;
+
+    color: #fff;
+    background-color: #2d6300;
+}
+.banner.main-container h2
+{
+    margin: 0 auto;
+    padding: 0;
+}
+#intro-banner, #finalist-intro-banner
+{
+    background-color: #44687d;
+}
+#nominations-banner
+{
+    margin-top: 104px;
+}
+#massTLC_logo
+{
+    float: left;
+
+    margin: 15px 0 15px 80px;
+}
+.inner-content
+{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+.inner-content p
+{
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+
+    text-align: left;
+}
+.button,
+form input[type='submit']
+{
+    font-weight: 700;
+
+    padding: 20px;
+
+    cursor: pointer;
+    transition: .3s all;
+    text-align: center;
+    text-decoration: none;
+
+    color: #fff;
+    border: 1px solid #2d6300;
+    background-color: #2d6300;
+    box-shadow: none;
+    text-shadow: none;
+}
+.button:hover,
+form input[type='submit']:hover
+{
+    text-decoration: none;
+
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #2d6300;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.main-container
+{
+    float: left;
+
+    width: 100%;
+    padding: 80px 0;
+}
+#container-1,
+#msg
+{
+    background-size: cover;
+}
+
+#container-1
+{
+    display: block;
+    float: left;
+
+    width: 100%;
+    padding: 104px 0 0 0;
+
+    text-align: center;
+
+    background-image: url('http://www.masstlcawards.com/wp-content/uploads/2016/04/Screenshot-2016-04-19-12.13.40.png');
+}
+#container-1 .inner-content p,
+#sponsors .inner-content p
+{
+    text-align: center;
+}
+#container-1 a
+{
+    display: block;
+
+    margin: 0 auto;
+
+    text-decoration: none;
+}
+
+.content-player
+{
+    width: 60%;
+    height: 450px;
+    margin: 0 auto;
+
+    background-color: white;
+}
+
+.register-here
+{
+    width: 15%;
+    margin: 30px auto;
+
+    border: 2px;
+    border-color: black;
+    background-color: rgb(140,203,109);
+}
+
+#rh-styles
+{
+    font-size: 14pt;
+
+    margin: 0;
+
+    text-align: center;
+}
+
+#t-i-o
+{
+    font-size: 15pt;
+    font-style: italic;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    text-align: center;
+    text-decoration: underline;
+
+    color: white;
+}
+
+
+
+#container-2
+{
+    float: left;
+
+    width: 100%;
+
+    background-color: #e3e3e3;
 }
 /*
 .column-1 {
@@ -231,184 +307,247 @@ iframe{
 	width: 100%;
 }*/
 
-.column-2 {
-	background-color: white;
-	float: left;
-	width: 50%;
+.column-2
+{
+    float: left;
+
+    width: 50%;
+
+    background-color: white;
 }
 
-#column_1_p {
-	float: right;
-	margin: 0 30px 0 0;
-	width: 70%;
-	text-align: left;
-	padding: 72px 0px 72px 0px;
+#column_1_p
+{
+    float: right;
+
+    width: 70%;
+    margin: 0 30px 0 0;
+    padding: 72px 0 72px 0;
+
+    text-align: left;
 }
 
-#column_2_p {
-	float: left;
-	margin: 0 0 0 30px;
-	width: 70%;
-	text-align: left;
-	padding: 72px 0px 72px 0px;
+#column_2_p
+{
+    float: left;
+
+    width: 70%;
+    margin: 0 0 0 30px;
+    padding: 72px 0 72px 0;
+
+    text-align: left;
 }
 
-.hr-1 {
-	width: 80%;
+.hr-1
+{
+    width: 80%;
 }
 
-.column-3 {
-	background-color: white;
-	width: 50%;
-	float: left;
+.column-3
+{
+    float: left;
+
+    width: 50%;
+
+    background-color: white;
 }
 
-.column-4 {
-	background-color: white;
-	width: 50%;
-	float: left;
+.column-4
+{
+    float: left;
+
+    width: 50%;
+
+    background-color: white;
 }
 
-#commonwealthA {
-	text-align: center;
-	width: 100%;
-	font-size: 18pt;
+#commonwealthA
+{
+    font-size: 18pt;
+
+    width: 100%;
+
+    text-align: center;
 }
 
-#DLA {
-	text-align: center;
-	width: 100%;
-	font-size: 18pt;
+#DLA
+{
+    font-size: 18pt;
+
+    width: 100%;
+
+    text-align: center;
 }
 
-.circle-1 {
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 70px;
-	width: 300px;
-	height: 300px;
-	background: white;
-	border: 2px solid black;
-	-moz-border-radius: 150px;
-	-webkit-border-radius: 150px;
-	border-radius: 150px;
+.circle-1
+{
+    width: 300px;
+    height: 300px;
+    margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
+
+    border: 2px solid black;
+    -webkit-border-radius: 150px;
+       -moz-border-radius: 150px;
+            border-radius: 150px;
+    background: white;
 }
 
-#MichaelS {
-	text-align: center;
+#MichaelS
+{
+    text-align: center;
 }
 
-#michaelS_p {
-	text-align: center;
-	width: 70%;
-	font-size: 12pt;
-	margin: 0 auto;
+#michaelS_p
+{
+    font-size: 12pt;
+
+    width: 70%;
+    margin: 0 auto;
+
+    text-align: center;
 }
 
 
-.sm-column-1 {
-	background-color: white;
-	float: left;
-	width: 50%;
+.sm-column-1
+{
+    float: left;
+
+    width: 50%;
+
+    background-color: white;
 }
 
-.sm-column-2 {
-	background-color: white;
-	float: left;
-	width: 50%;
+.sm-column-2
+{
+    float: left;
+
+    width: 50%;
+
+    background-color: white;
 }
 
-.sm-column-3 {
-	background-color: white;
-	float: left;
-	width: 50%;
+.sm-column-3
+{
+    float: left;
+
+    width: 50%;
+
+    background-color: white;
 }
 
-.sm-column-4 {
-	background-color: white;
-	float: left;
-	width: 50%;
+.sm-column-4
+{
+    float: left;
+
+    width: 50%;
+
+    background-color: white;
 }
 
-#big-trophy {
-	text-align: center;
+#big-trophy
+{
+    font-size: 60px;
+
     position: relative;
     left: 50%;
-    width: 120px;
-    height: 120px;
-    transform: translate(-50%,0);
+
     display: block;
     float: left;
+
+    width: 120px;
+    height: 120px;
     margin: 20px auto;
-    font-size: 60px;
     padding: 30px;
+
+    transform: translate(-50%,0);
+    text-align: center;
+
     color: #44687d;
-    background: none;
-    border: 2px solid #2D6300;
-    -moz-border-radius: 50%;
+    border: 2px solid #2d6300;
     -webkit-border-radius: 50%;
-    border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    background: none;
 }
 
 
 
 
-#sponsors {
-	background-color: #e3e3e3;
-	width: 100%;
-	float: left;
-}
-#sponsors a{
-	width:150px;
-	height:150px;
-	background:#FFF;
-	position:relative;
-	display:inline-block;
-	margin: 5px;
-}
-#sponsors a img{
-	position: absolute;
-	width: 85%;
-	height: auto;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-#platinum-container a{
-	width: 200px;
-	height: 200px;
+#sponsors
+{
+    float: left;
 
-}
-#gold-container a{
-	width: 150px;
-	height: 150px;
+    width: 100%;
 
+    background-color: #e3e3e3;
 }
-#silver-container a{
-	width: 100px;
-	height: 100px;
+#sponsors a
+{
+    position: relative;
 
+    display: inline-block;
+
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+
+    background: #fff;
+}
+#sponsors a img
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 85%;
+    height: auto;
+
+    transform: translate(-50%, -50%);
+}
+#platinum-container a
+{
+    width: 200px;
+    height: 200px;
+}
+#gold-container a
+{
+    width: 150px;
+    height: 150px;
+}
+#silver-container a
+{
+    width: 100px;
+    height: 100px;
 }
 
-#platinum-container, #gold-container, #silver-container {
-	width: 50%;
-	margin: 0 auto;
+#platinum-container,
+#gold-container,
+#silver-container
+{
+    width: 50%;
+    margin: 0 auto;
     margin-bottom: 40px;
-	text-align:center;
+
+    text-align: center;
 }
 
 
-#become-sponsor {
-	float: left;
-	width: 100%;
+#become-sponsor
+{
+    float: left;
 
-	background:url('http://www.masstlcawards.com/wp-content/uploads/2016/04/15981833431_9bd566cac2_o.jpg') center center;	
+    width: 100%;
+
+    background: url('http://www.masstlcawards.com/wp-content/uploads/2016/04/15981833431_9bd566cac2_o.jpg') center center;
 }
-#become-sponsor .inner-content{
-	padding:80px;
-	margin: 80px auto;
-	background:rgba(255,255,255, 0.7);
+#become-sponsor .inner-content
+{
+    margin: 80px auto;
+    padding: 80px;
 
+    background: rgba(255,255,255, .7);
 }
 
 /*#become-sponsor-insideContainer {
@@ -416,32 +555,40 @@ iframe{
 	width: 80%;
 }*/
 
-.become-sponsor-insideColumns {
-	
+
+.become-sponsor-insideColumns h2
+{
+    padding: 20px 0;
 }
-.become-sponsor-insideColumns h2{
-	padding:20px 0;
-}
-.become-sponsor-insideColumns p{
-	width: 80%;
+.become-sponsor-insideColumns p
+{
+    width: 80%;
     margin: 0 auto;
 }
-.become-sponsor-insideColumns.right{
-	float:right;
+.become-sponsor-insideColumns.right
+{
+    float: right;
 }
 
-.button:hover, .become-sponsor-insideColumns a:hover, form input[type="submit"]:hover{
-	background-color: #2D6300;
-	border: 1px solid #2D6300;
-	text-decoration: none;
-	color:#FFF;
+.button:hover,
+.become-sponsor-insideColumns a:hover,
+form input[type='submit']:hover
+{
+    text-decoration: none;
+
+    color: #fff;
+    border: 1px solid #2d6300;
+    background-color: #2d6300;
 }
-.become-sponsor-insideColumns a {
-	left:50%;
-	width: 70%;
-	transform: translate(-50%,0);
-	position:absolute;
-	bottom:20px;
+.become-sponsor-insideColumns a
+{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+
+    width: 70%;
+
+    transform: translate(-50%,0);
 }
 
 
@@ -456,49 +603,68 @@ iframe{
 
 
 
-#container-3 {
-	background-color: #44687d;
-	float: left;
-	width: 100%;
+#about-the-gala
+{
+    float: left;
+
+    width: 100%;
+
+    background-color: #e3e3e3;
 }
 
 
-.column-5, .column-6{
-	color:#FFF;
-	width: 45%;
-	text-align:left;
+.column-5,
+.column-6
+{
+    width: 45%;
+
+    text-align: left;
+
+    color: #404040;
 }
-.column-5{
-	float:left;
+.column-5
+{
+    float: left;
 }
-.column-6{
-	float:right;
+.column-6
+{
+    float: right;
 }
 
 
-.column-5 h2, .column-6 h2 {
-	text-align: left;
+.column-5 h2,
+.column-6 h2
+{
+    text-align: left;
 }
 
-.column-7 {
-	background-color: rgb(36,58,73);
-	float: left;
-	width: 100%;
+.column-7
+{
+    float: left;
+
+    width: 100%;
+
+    background-color: rgb(36,58,73);
 }
 
-.column-5 p {
-	text-align: left;
-	margin: 0 auto;
+.column-5 p
+{
+    margin: 0 auto;
+
+    text-align: left;
 }
 
-#column-7_p {
-	width: 80%;
-	text-align: center;
-	margin: 30px auto;
+#column-7_p
+{
+    width: 80%;
+    margin: 30px auto;
+
+    text-align: center;
 }
 
-.list-container ol{
-	float: left;
+.list-container ol
+{
+    float: left;
 }
 
 
@@ -506,614 +672,686 @@ iframe{
   align-content: flex-start | flex-end | center | space-between | space-around | stretch;
 }
 */
-#container-4 {
-	margin-top: 10px;
-	float: left;
-	width: 100%;
+#container-4
+{
+    float: left;
+
+    width: 100%;
+    margin-top: 10px;
 }
-.category-container{
-	float:left;
-	width: 100%;
-	display:flex;
+.category-container,
+.finalist-container
+{
+    display: flex;
+    float: left;
     flex-direction: row;
+
+    width: 100%;
+
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: flex-start;
     align-items: center;
 }
 
-.category{
+.category
+{
+    font-size: .8rem;
+
+    position: relative;
+
+    overflow: hidden;
+
     width: 315px;
     height: 177px;
-	margin: 20px 0;
-	font-size:.8rem;
-	overflow: hidden;
-	position: relative;
-	cursor: pointer;
-	color:#000;
-	border-radius:10px;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
-	text-align: center;
+    margin: 20px 0;
+
+    cursor: pointer;
+    text-align: center;
+
+    color: #000;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
 }
-.category *{
-	transition: .3s all;
+.category *
+{
+    transition: .3s all;
 }
-.category h3{
-	margin-top: 0;
+.category h3
+{
     font-size: 1.67em;
-	color: #FFF;
-	text-shadow: 0px 0px 5px rgba(0,0,0,.7);
-	text-align: left;
+    font-weight: 700;
+
+    margin-top: 0;
+
+    text-align: left;
+
+    color: #fff;
+    text-shadow: 0 0 4px rgba(0,0,0,.9);
 }
-.category p{
-	opacity: 0;
-	
+.category p
+{
+    opacity: 0;
 }
-.category img{
-	position: absolute;
-	width: 100%;
-	height: auto;
-	top:50%;
-	left:50%;
-	transform: translate(-50%, -50%);
-	-webkit-filter: grayscale(100%) brightness(1.3); /* Chrome, Safari, Opera */
-    filter: grayscale(100%) brightness(1.3);
-}
-.category h3, .category p {
-   	position:absolute;
+.category img
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
     width: 100%;
-    padding:20px;
+    height: auto;
+
+    transform: translate(-50%, -50%);
+
+       -moz-filter: grayscale(100%) brightness(2);
+    -webkit-filter: grayscale(100%) brightness(2); /* Chrome, Safari, Opera */
+            filter: grayscale(100%) brightness(2);
+}
+.category h3,
+.category p
+{
+    position: absolute;
+
+    width: 100%;
+    padding: 20px;
 }
 /*CATEGORY HOVER STYLES*/
-.category:hover img{
-	opacity: .1;
+.category:hover img
+{
+    opacity: .1;
 }
-.category:hover p{
-	opacity: 1;
+.category:hover p
+{
+    opacity: 1;
 }
-.category:hover h3{
-	opacity: 0;
-
-}
-
-.circles {
-	float: left;
-	margin: 0 auto;
-	margin-top: 25px;
-	width: 100px;
-	height: 100px;
-	border: 1px solid black;
-	background: white;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
-	margin-left: 20px;
+.category:hover h3
+{
+    opacity: 0;
 }
 
-.awards-title {
-	text-align: center;
-	font-size: 14pt;
+/*FINALIST STYLES*/
+#finalist-intro-banner{
+	margin-top: 104px;
+}
+.finalist-container
+{
+    align-items: flex-start;
+}
+.finalist
+{
+    width: 250px;
+}
+.finalist-img-container
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 250px;
+
+    border: #c5c5c5 solid 1px;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+    background-color: #fff;
+}
+.finalist img
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 90%;
+
+    transform: translate(-50%,-50%);
+}
+.finalist h2
+{
+    margin: 20px 0 0 0;
+
+    text-align: left;
+}
+#blank-page.main-container{
+	padding:0;
 }
 
-.awards-paragraphs {
-	margin-right: 10px;
-	text-align: left;
-	float: right;
-	width: 60%;
+.circles
+{
+    float: left;
+
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-left: 20px;
+
+    border: 1px solid black;
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
+    background: white;
 }
 
+.awards-title
+{
+    font-size: 14pt;
 
-
-#dates {
-	float: left;
-	width: 100%;
-	color:#FFF;
-	background-color:#2D6300 ;
+    text-align: center;
 }
 
+.awards-paragraphs
+{
+    float: right;
 
-#saveTheDates {
+    width: 60%;
+    margin-right: 10px;
 
-	font-size: 20pt;
-}
-
-.dates-containers {
-	float: left;
-	width: 25%;
-}
-
-.dates-h5-style {
-	text-align: center;
-	width: 100%;
-	float: left;
-	margin: 20px auto;
-	font-size: 13pt;
-}
-
-.inner-content .dates-p-style {
-	text-align: center;
-	font-size: 17px;
-}
-
-#social-media {
-	float: left;
-	width: 100%;
-}
-
-.socialMedia-containers {
-	float: left;
-	width: 33.333%;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
-#massTLC {
-	width: 300px;
-	height: 100px;
-	background-color: gray;
-	margin: 20px;
-}
-
-.circles-2 {
-	float: left;
-	margin: 0 auto;
-	margin-top: 25px;
-	width: 75px;
-	height: 75px;
-	background: gray;
-	-moz-border-radius: 37.5px;
-	-webkit-border-radius: 37.5px;
-	border-radius: 37.5px;
-	margin-left: 25px;
-	margin-bottom: 15px;
-}
-
-i.fa.fa-facebook {
-	color: white;
-	font-size: 25px;
-	margin-top: 30px;
-	margin-left: 25px;
-}
-
-i.fa.fa-linkedin {
-	color: white;
-	font-size: 25px;
-	margin-top: 30px;
-	margin-left: 15px;
-}
-
-i.fa.fa-twitter {
-	color: white;
-	font-size: 25px;
-	margin-top: 30px;
-	margin-left: 15px;
-}
-
-#latest-tweets {
-	font-size: 14pt;
-	margin-left: 20px;
-}
-
-.keep-left {
-	text-align: left;
-	margin-top: 30px;
-	margin-left: 20px;
-}
-
-#flickr {
-	font-size: 14pt;
-	margin-left: 20px;
-}
-
-.flickr-imgs {
-	width: 40%;
-	height: 100px;
-	background-color: gray;
-	display: inline-block;
-	margin-left: 20px;
-	margin-top: 20px;
-}
-
-.bottom-footer {
-	background-color: #000;
-	float: left;
-	width: 100%;
-	text-align: center;
-}
-
-.bottom-footer p {
-	color: #FFF;
-	margin: 41px auto;
-}
-.bottom-footer a, .bottom-footer a:visited{
-	color:#2D6300;
-}
-#tweets{
-	padding-right:20px;
-}
-#tweets a{
-	color:#2D6300;
-	margin-bottom: 20px;
-	display:block;
+    text-align: left;
 }
 
 
 
+#dates
+{
+    float: left;
 
-#msg {
-	/*background-image:url('http://www.masstlcawards.com/wp-content/uploads/2016/04/15798109697_8bbb5759bc_o.jpg');*/
-	background-color:#44687D ;
-	float: left;
-	width: 100%;
+    width: 100%;
+
+    color: #fff;
+    background-color: #2d6300 ;
 }
 
-#info-holder {
-	margin: 0 auto;
-	width: 60%;
+
+#saveTheDates
+{
+    font-size: 20pt;
 }
 
-#info-holder-1 {
-	float: left;
-	width: 50%;
-	margin-top: 50px;
-	margin-bottom: 50px;
+.dates-containers
+{
+    float: left;
+
+    width: 25%;
 }
 
-.fill-info {
-	margin-bottom: 10px;
-	margin-top: 10px;
-	margin-left: 20px;
-	margin-right: 20px;
-	font-size: 12pt;
+.dates-h5-style
+{
+    font-size: 13pt;
+
+    float: left;
+
+    width: 100%;
+    margin: 20px auto;
+
+    text-align: center;
 }
 
-form input[type="text"], form input[type="email"], form textarea {
-	border: 1px solid #2D6300;
-	width: 90%;
-	margin:0 auto;
-	display:inline-block;
-	margin-bottom: 20px;
-	max-width: 400px;
+.inner-content .dates-p-style
+{
+    font-size: 17px;
+
+    text-align: center;
 }
-.inner-content form p {
+
+#social-media
+{
+    float: left;
+
+    width: 100%;
+}
+
+.socialMedia-containers
+{
+    float: left;
+
+    width: 33.333%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#massTLC
+{
+    width: 300px;
+    height: 100px;
+    margin: 20px;
+
+    background-color: gray;
+}
+
+.circles-2
+{
+    float: left;
+
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+
+    -webkit-border-radius: 37.5px;
+       -moz-border-radius: 37.5px;
+            border-radius: 37.5px;
+    background: gray;
+}
+
+i.fa.fa-facebook
+{
+    font-size: 25px;
+
+    margin-top: 30px;
+    margin-left: 25px;
+
+    color: white;
+}
+
+i.fa.fa-linkedin
+{
+    font-size: 25px;
+
+    margin-top: 30px;
+    margin-left: 15px;
+
+    color: white;
+}
+
+i.fa.fa-twitter
+{
+    font-size: 25px;
+
+    margin-top: 30px;
+    margin-left: 15px;
+
+    color: white;
+}
+
+#latest-tweets
+{
+    font-size: 14pt;
+
+    margin-left: 20px;
+}
+
+.keep-left
+{
+    margin-top: 30px;
+    margin-left: 20px;
+
+    text-align: left;
+}
+
+#flickr
+{
+    font-size: 14pt;
+
+    margin-left: 20px;
+}
+
+.flickr-imgs
+{
+    display: inline-block;
+
+    width: 40%;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
+
+    background-color: gray;
+}
+
+.bottom-footer
+{
+    float: left;
+
+    width: 100%;
+
+    text-align: center;
+
+    background-color: #000;
+}
+
+.bottom-footer p
+{
+    margin: 41px auto;
+
+    color: #fff;
+}
+.bottom-footer a,
+.bottom-footer a:visited
+{
+    color: #2d6300;
+}
+#tweets
+{
+    padding-right: 20px;
+}
+#tweets a
+{
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #2d6300;
+}
+
+
+
+
+#msg
+{
+    float: left;
+
+    width: 100%;
+    /*background-image:url('http://www.masstlcawards.com/wp-content/uploads/2016/04/15798109697_8bbb5759bc_o.jpg');*/
+
+    background-color: #44687d ;
+}
+
+#info-holder
+{
+    width: 60%;
+    margin: 0 auto;
+}
+
+#info-holder-1
+{
+    float: left;
+
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.fill-info
+{
+    font-size: 12pt;
+
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+form input[type='text'],
+form input[type='email'],
+form textarea
+{
+    display: inline-block;
+
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    border: 1px solid #2d6300;
+}
+.inner-content form p
+{
     width: 80%;
     max-width: 400px;
-    color:#FFF;
-    text-shadow: 0px 0px 10px rgba(0,0,0,.6)
+
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,0,0,.6);
 }
-#recaptcha iframe {
-    width: 100%;
+#recaptcha iframe
+{
     position: absolute;
     left: 50%;
-    transform:translate(-50%, 0);
+
+    width: 100%;
+
+    transform: translate(-50%, 0);
 }
 
-.fill-textarea{
-	
+
+
+#message
+{
+    height: 250px;
 }
 
-#message {
-	height: 250px;
+#send-msg
+{
+    display: block;
+
+    width: 400px;
+    margin: 0 auto;
 }
 
-#send-msg {
-	display:block;
-	width:400px;
-	margin: 0 auto;
+.social-media-icon
+{
+    font-size: 60px;
 
-}
-
-.social-media-icon {
-	text-align: center;
     position: relative;
-    width: 45px;
-    height: 45px;
-    transform: translate(-50%,0);
+
     display: block;
     float: left;
+
+    width: 45px;
+    height: 45px;
     margin: 20px auto;
-    font-size: 60px;
     padding: 10px;
+
+    transform: translate(-50%,0);
+    text-align: center;
+
     color: #44687d;
-    background: gray;
-    -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    background: gray;
 }
-footer.main-container{
-	padding-bottom:0;
+footer.main-container
+{
+    padding-bottom: 0;
 }
-.footer-social-media {
-	float: left;
-	width: 33.333%;
-}
+.footer-social-media
+{
+    float: left;
 
-footer .inner-content a {
-	background:none;
-	font-weight:none;
-	border: none;
-	text-decoration: none;
-	color:none;
-	cursor: pointer; 
-	text-align: none;
-	padding:0px;
-	transition:none;
+    width: 33.333%;
 }
 
-footer .inner-content a:hover, .button:hover, .become-sponsor-insideColumns a:hover{
-	background:none;
-	border:none;
-	text-decoration: none;
-	color:none;
-	box-shadow: none;
-	text-shadow:none;
+footer .inner-content a
+{
+    font-weight: none;
+
+    padding: 0;
+
+    cursor: pointer;
+    transition: none;
+    text-align: none;
+    text-decoration: none;
+
+    color: none;
+    border: none;
+    background: none;
 }
 
-.massTLC-footer-logo {
-	float: left;
-	margin-right: 55px;
+footer .inner-content a:hover,
+.button:hover,
+.become-sponsor-insideColumns a:hover
+{
+    text-decoration: none;
+
+    color: none;
+    border: none;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
 }
 
-.footer-social-media h3 {
-	text-align: left;
+.massTLC-footer-logo
+{
+    float: left;
+
+    margin-right: 55px;
 }
 
-.footer-social-media div {
-	width: 100%;
+.footer-social-media h3
+{
+    text-align: left;
 }
 
-.footer-social-media img {
-	width: 210px;
+.footer-social-media div
+{
+    width: 100%;
 }
 
-.footer-social-media #flickr-image-container {
-	width: 280px;
+.footer-social-media img
+{
+    width: 210px;
 }
 
-.footer-social-media #flickr-image-container div {
-	background-color: gray;
-	float: left;
-	width: 45.5%;
-	height: 80px;
-	margin: 0px 5px 5px 0;
+.footer-social-media #flickr-image-container
+{
+    width: 280px;
 }
 
+.footer-social-media #flickr-image-container div
+{
+    float: left;
 
-#flickr-image-container img {
-	width: 100%;
-	height: 100%;
-}
+    width: 45.5%;
+    height: 80px;
+    margin: 0 5px 5px 0;
 
-
-
-@media (max-width: 980px) {
-
-	#nav-bar {
-		float: left;
-		width: 100%;
-	}
-
-
-	.content-player {
-		width: 80%;
-		height: 400px
-	}
-
-
-	#platinum-container, #gold-container, #silver-container {
-	width: 100%;
-	margin: 0 auto;
-/*	height: 220px;*/
+    background-color: gray;
 }
 
 
-	.platinum-sponsors {
-		background-color: white;
-	    margin: .5%;
-	    width: 24%;
-	    height: 100px;
-	    float: left;
-	}
-
-	.gold-sponsors {
-		background-color: white;
-	    margin: .5%;
-	    width: 24%;
-	    height: 100px;
-	    float: left;
-	}
-
-
-	.socialMedia-containers {
-		float: left;
-		width: 100%;
-	}
-
-	#latest-tweets {
-		margin-left: 10px;
-	}
-
-	.keep-left {
-		margin-left: 10px;
-	}
-
-	#flickr {
-		margin-left: 50px;
-	}
-
-	.flickr-imgs {
-		margin-top: 10px;
-		margin-left: 10px;
-		margin-right: auto;
-	}
-
-	#flickr-container {
-	margin: 0 auto;
-	width: 100%;
-	}
-
-	.info-holder-1 {
-		float: left;
-		width: 100%;
-	}
-
-	.dates-containers {
-		float: left;
-		width: 100%;
-	}
-
-	.container_3perLine {
-		float: left;
-		width: 100%;
-	}
-
-	.awards-paragraphs {
-		width: 80%;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-
-	.footer-social-media {
-		width: 100%;
-	}
-
+#flickr-image-container img
+{
+    width: 100%;
+    height: 100%;
 }
 
 
 
+@media (max-width: 980px)
+{
+    #nav-bar
+    {
+        float: left;
+
+        width: 100%;
+    }
 
 
+    .content-player
+    {
+        width: 80%;
+        height: 400px;
+    }
 
 
+    #platinum-container,
+    #gold-container,
+    #silver-container
+    {
+        width: 100%;
+        margin: 0 auto;
+        /*	height: 220px;*/
+    }
 
 
-@media (max-width: 480px) {
+    .platinum-sponsors
+    {
+        float: left;
 
-	#nav-bar {
-		float: left;
-		width: 100%;
-	}
+        width: 24%;
+        height: 100px;
+        margin: .5%;
 
-	.nav-items {
-		float: none;
-	}
+        background-color: white;
+    }
 
+    .gold-sponsors
+    {
+        float: left;
 
-	.content-player {
-		width: 80%;
-		height: 200px;
-	}
+        width: 24%;
+        height: 100px;
+        margin: .5%;
 
-
-	.become-sponsor-insideColumns {
-		float: left;
-		width: 100%;
-		margin-bottom: 20px;
-		margin-top: 20px;
-	}
-
-	.socialMedia-containers {
-		float: left;
-		width: 100%;
-	}
-
-	.platinum-sponsors {
-		width: 49%;
-	}
-
-	.gold-sponsors {
-		width: 49%;
-	}
-
-	#platinum-container {
-		width: 100%;
-		margin: 0 auto;
-	}
-
-	#platinum-container-2 {
-		width: 100%;
-	}
-
-	#latest-tweets {
-		margin-left: 10px;
-	}
-
-	.keep-left {
-
-	}
-
-	#flickr {
-		margin-left: 10px;
-	}
-
-	.flickr-imgs {
-		width: 80%;
-		height: 200px;
-		margin-top: 0;
-		margin-left: 38px;
-	}
-
-	#info-holder-1 {
-		float: left;
-		width: 100%;
-	}
-
-	.dates-containers {
-		float: left;
-		width: 100%;
-	}
-
-	.container_3perLine {
-		float: left;
-		width: 100%;
-	}
-
-	.register-here {
-		width: 50%;
-		padding: 10px;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.column-5 {
-		width: 100%;
-	}
-
-	.column-6 {
-		width: 100%;
-	}
-
-	ol.list-1 {
-		margin-left: 40px;
-	}
-
-	.column-5-h2 {
-		text-align: center;
-	}
-
-	#bottom-footer-p {
-		margin-top: 30px;
-		margin-bottom: 0;
-	}
-
-	#message {
-		width: 100%;
-		height: 200px;
-		margin: 0 auto;
-	}
-
-	#send-msg {
-		width: 100%;
-		margin-left: 3px;
-	}
+        background-color: white;
+    }
 
 
+    .socialMedia-containers
+    {
+        float: left;
+
+        width: 100%;
+    }
+
+    #latest-tweets
+    {
+        margin-left: 10px;
+    }
+
+    .keep-left
+    {
+        margin-left: 10px;
+    }
+
+    #flickr
+    {
+        margin-left: 50px;
+    }
+
+    .flickr-imgs
+    {
+        margin-top: 10px;
+        margin-right: auto;
+        margin-left: 10px;
+    }
+
+    #flickr-container
+    {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .info-holder-1
+    {
+        float: left;
+
+        width: 100%;
+    }
+
+    .dates-containers
+    {
+        float: left;
+
+        width: 100%;
+    }
+
+    .container_3perLine
+    {
+        float: left;
+
+        width: 100%;
+    }
+
+    .awards-paragraphs
+    {
+        width: 80%;
+    }
+
+    h1
+    {
+        width: 100%;
+    }
+
+
+    .footer-social-media
+    {
+        width: 100%;
+    }
 }
 
 
@@ -1124,15 +1362,155 @@ footer .inner-content a:hover, .button:hover, .become-sponsor-insideColumns a:ho
 
 
 
+@media (max-width: 480px)
+{
+    #nav-bar
+    {
+        float: left;
+
+        width: 100%;
+    }
+
+    .nav-items
+    {
+        float: none;
+    }
 
 
+    .content-player
+    {
+        width: 80%;
+        height: 200px;
+    }
 
 
+    .become-sponsor-insideColumns
+    {
+        float: left;
 
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
+    .socialMedia-containers
+    {
+        float: left;
 
+        width: 100%;
+    }
 
+    .platinum-sponsors
+    {
+        width: 49%;
+    }
 
+    .gold-sponsors
+    {
+        width: 49%;
+    }
 
+    #platinum-container
+    {
+        width: 100%;
+        margin: 0 auto;
+    }
 
+    #platinum-container-2
+    {
+        width: 100%;
+    }
 
+    #latest-tweets
+    {
+        margin-left: 10px;
+    }
+
+    .keep-left
+    {
+    }
+
+    #flickr
+    {
+        margin-left: 10px;
+    }
+
+    .flickr-imgs
+    {
+        width: 80%;
+        height: 200px;
+        margin-top: 0;
+        margin-left: 38px;
+    }
+
+    #info-holder-1
+    {
+        float: left;
+
+        width: 100%;
+    }
+
+    .dates-containers
+    {
+        float: left;
+
+        width: 100%;
+    }
+
+    .container_3perLine
+    {
+        float: left;
+
+        width: 100%;
+    }
+
+    .register-here
+    {
+        width: 50%;
+        padding: 10px;
+    }
+
+    h1
+    {
+        width: 100%;
+    }
+
+    .column-5
+    {
+        width: 100%;
+    }
+
+    .column-6
+    {
+        width: 100%;
+    }
+
+    ol.list-1
+    {
+        margin-left: 40px;
+    }
+
+    .column-5-h2
+    {
+        text-align: center;
+    }
+
+    #bottom-footer-p
+    {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    #message
+    {
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    #send-msg
+    {
+        width: 100%;
+        margin-left: 3px;
+    }
+}
